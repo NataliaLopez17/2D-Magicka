@@ -20,6 +20,7 @@ public class Inventory {
     private boolean active = false;
     private UIManager uiManager;
     private ArrayList<Item> inventoryItems;
+//    public ArrayList<Item> inv = inventoryItems;
 
     public Inventory(Handler handler){
 
@@ -101,7 +102,7 @@ public class Inventory {
     public void addItem(Item item){
         for(Item i : inventoryItems){
             if(i.getId() == item.getId()){
-                i.setCount(i.getCount()+item.getCount());
+                i.setCount(i.getCount() + /*item.getCount()*/ 1);
                 return;
             }
         }
@@ -128,4 +129,18 @@ public class Inventory {
     public void setActive(boolean active) {
         this.active = active;
     }
+
+//	public void addItemsBy1(Item items) {
+//		for(Item i : inventoryItems){
+//            if(i.getId() == items.getId()){
+//                i.setCount(i.getCount() + 1);
+//                return;
+//            }
+//        }
+//        if(items.getId()==2){
+//            handler.getWorld().getEntityManager().getPlayer().getSpellGUI().addSpell(new FireBallSpell(handler));
+//        }
+//        inventoryItems.add(items);
+//		
+//	}
 }
