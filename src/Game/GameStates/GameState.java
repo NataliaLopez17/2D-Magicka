@@ -24,6 +24,9 @@ public class GameState extends State {
     @Override
     public void tick() {
         handler.getWorld().tick();
+        if(handler.getKeyManager().skip) {
+        	handler.setWorld(World1.caveWorld);
+        }
 
     }
 

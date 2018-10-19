@@ -1,4 +1,5 @@
 package Worlds;
+import Worlds.World1;
 import Game.Entities.Creatures.Player;
 import Game.Entities.Statics.Door;
 import Main.Handler;

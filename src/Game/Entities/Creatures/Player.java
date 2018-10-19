@@ -151,19 +151,6 @@ public class Player extends CreatureBase {
 		//spellgui
 		spellGUI.tick();
 	}
-//	public void addItemsBy1(Item item) {
-//		for(Item i : inventoryItems){
-//			if(i.getId() == item.getId()){
-//				i.setCount(i.getCount() + 1);
-//				return;
-//			}
-//		}
-//		if(item.getId()==2){
-//			handler.getWorld().getEntityManager().getPlayer().getSpellGUI().addSpell(new FireBallSpell(handler));
-//		}
-//		inventoryItems.add(item);
-//
-//	}
 
 	@Override
 	public void render(Graphics g) {
