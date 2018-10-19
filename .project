@@ -31,6 +31,11 @@
 			<location>C:/Users/NATALIA E/Desktop/Magika/health potion.png</location>
 		</link>
 		<link>
+			<name>res/Sheets/money bag.png</name>
+			<type>1</type>
+			<location>C:/Users/NATALIA E/Desktop/Magika/money bag.png</location>
+		</link>
+		<link>
 			<name>res/Sheets/newObject.png</name>
 			<type>1</type>
 			<location>C:/Users/NATALIA E/Desktop/Magika/newObject.png</location>
