@@ -27,6 +27,7 @@ public class Images {
     public static BufferedImage[] butstart;
     public static BufferedImage[] particleSmoke;
     public static BufferedImage[] items;
+    public static BufferedImage[] newitem;
     public static BufferedImage[] numbers;
     public static BufferedImage inventory;
     public static BufferedImage title;
@@ -57,7 +58,7 @@ public class Images {
         SpriteSheet FireBallRightsheet = new SpriteSheet(Images.loadImage("/Sheets/FireBallRight.png"));
         SpriteSheet FireBallUpsheet = new SpriteSheet(Images.loadImage("/Sheets/FireBallUp.png"));
         SpriteSheet FireBallDownsheet = new SpriteSheet(Images.loadImage("/Sheets/FireBallDown.png"));
-//        BufferedImage[] moneyBag = new SpriteSheet(Images.loadImage("/Sheets/money bag.png"));
+        SpriteSheet moneybag = new SpriteSheet(Images.loadImage("/Sheets/money bag.png"));
 
 
         blocks = new BufferedImage[15];
@@ -75,7 +76,8 @@ public class Images {
         butstart = new BufferedImage[3];
         particleSmoke = new BufferedImage[3];
         items = new BufferedImage[3];
-        moneyBag = new BufferedImage[0];
+        newitem = new BufferedImage[3];
+        
         numbers = new BufferedImage[21];
         Resume = new BufferedImage[2];
         BTitle = new BufferedImage[2];
@@ -162,8 +164,10 @@ public class Images {
             particleSmoke[0]= newsheet.crop(111,397,18,38);
             particleSmoke[1]= newsheet.crop(129,399,20,35);
             particleSmoke[2]= newsheet.crop(154,400,20,35);
-
+            
             items[0]= newsheet.crop(114,448,30,24);//log
+            newitem[0] = moneybag.crop(0, 0, 443, 482);
+            
 
             numbers[1]= numsheet.crop(17,15,17,22);
             numbers[2]= numsheet.crop(64,16,14,19);

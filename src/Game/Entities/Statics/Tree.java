@@ -19,6 +19,7 @@ public class Tree extends StaticEntity {
     private AudioFormat format;
     private DataLine.Info info;
     private Clip audioClip;
+    public static int COUNTER;
 
     public Tree(Handler handler, float x, float y) {
         super(handler, x, y, Tile.TILEHEIGHT * 2, Tile.TILEWIDTH);
@@ -71,11 +72,11 @@ public class Tree extends StaticEntity {
     }
 
 
-
     @Override
     public void die() {
         handler.getWorld().getItemManager().addItem(Item.woodItem.createNew((int)x + bounds.x,(int)y + bounds.y,1));
-        handler.getWorld().getItemManager().addItem(Item.moneyBagItem.createNew((int)x + bounds.x,(int)y + bounds.y,3));
+        handler.getWorld().getItemManager().addItem(Item.moneyBagItem.createNew((int)x + bounds.x,(int)y + bounds.y,1));
+        COUNTER++;
 
     }
 

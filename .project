@@ -14,4 +14,26 @@
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>res/Sheets/companionItem.png</name>
+			<type>1</type>
+			<location>C:/Users/NATALIA E/Desktop/Magika/companionItem.png</location>
+		</link>
+		<link>
+			<name>res/Sheets/gate.png</name>
+			<type>1</type>
+			<location>C:/Users/NATALIA E/Desktop/Magika/gate.png</location>
+		</link>
+		<link>
+			<name>res/Sheets/health potion.png</name>
+			<type>1</type>
+			<location>C:/Users/NATALIA E/Desktop/Magika/health potion.png</location>
+		</link>
+		<link>
+			<name>res/Sheets/newObject.png</name>
+			<type>1</type>
+			<location>C:/Users/NATALIA E/Desktop/Magika/newObject.png</location>
+		</link>
+	</linkedResources>
 </projectDescription>

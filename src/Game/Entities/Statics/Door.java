@@ -5,6 +5,9 @@ import Game.GameStates.State;
 import Main.Handler;
 import Resources.Images;
 import Worlds.BaseWorld;
+import Game.Inventories.Inventory;
+import Game.Items.Item;
+import Game.Entities.Statics.Tree;
 
 import java.awt.*;
 
@@ -17,6 +20,8 @@ public class Door extends StaticEntity {
 
     private Rectangle ir = new Rectangle();
     public Boolean EP = false;
+    private Boolean doorz = true;
+    private Item money1 = Item.moneyBagItem;
 
     private BaseWorld world;
 
@@ -52,13 +57,16 @@ public class Door extends StaticEntity {
         }
 
     }
-
     @Override
     public void render(Graphics g) {
-        g.drawImage(Images.door,(int)(x-handler.getGameCamera().getxOffset()),(int)(y-handler.getGameCamera().getyOffset()),width,height,null);
+    	System.out.println(Tree.COUNTER);
+        if (Tree.COUNTER >= 1) {
+        	g.drawImage(Images.door,(int)(x-handler.getGameCamera().getxOffset()),(int)(y-handler.getGameCamera().getyOffset()),width,height,null);
 
-        g.setColor(Color.black);
-        checkForPlayer(g, handler.getWorld().getEntityManager().getPlayer());
+	        g.setColor(Color.black);
+	        checkForPlayer(g, handler.getWorld().getEntityManager().getPlayer());
+        }
+
     }
 
     private void checkForPlayer(Graphics g, Player p) {
