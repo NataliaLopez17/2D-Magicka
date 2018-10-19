@@ -129,18 +129,4 @@ public class Inventory {
     public void setActive(boolean active) {
         this.active = active;
     }
-
-//	public void addItemsBy1(Item items) {
-//		for(Item i : inventoryItems){
-//            if(i.getId() == items.getId()){
-//                i.setCount(i.getCount() + 1);
-//                return;
-//            }
-//        }
-//        if(items.getId()==2){
-//            handler.getWorld().getEntityManager().getPlayer().getSpellGUI().addSpell(new FireBallSpell(handler));
-//        }
-//        inventoryItems.add(items);
-//		
-//	}
 }

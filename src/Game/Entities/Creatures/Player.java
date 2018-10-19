@@ -28,6 +28,7 @@ public class Player extends CreatureBase {
 	public Item hwhood = Item.woodItem;
 	public Item firee = Item.fireRuneItem;
 	public Item rocky = Item.rockItem;
+	public Item money = Item.moneyBagItem;
 	private ArrayList<Item> inventoryItems;
 
 
@@ -131,7 +132,7 @@ public class Player extends CreatureBase {
 			handler.getWorld().getEntityManager().getPlayer().getInventory().addItem(rocky);
 			handler.getWorld().getEntityManager().getPlayer().getInventory().addItem(firee);
 			handler.getWorld().getEntityManager().getPlayer().getInventory().addItem(hwhood);
-
+			handler.getWorld().getEntityManager().getPlayer().getInventory().addItem(money);
 		}
 
 		// Attack

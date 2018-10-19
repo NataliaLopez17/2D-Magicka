@@ -45,6 +45,7 @@ public class Images {
     public static BufferedImage[] FireBallDown;
     public static BufferedImage loading;
     public static BufferedImage spellGUI;
+    public static BufferedImage[] moneyBag;
 
 
     public Images() {
@@ -56,7 +57,7 @@ public class Images {
         SpriteSheet FireBallRightsheet = new SpriteSheet(Images.loadImage("/Sheets/FireBallRight.png"));
         SpriteSheet FireBallUpsheet = new SpriteSheet(Images.loadImage("/Sheets/FireBallUp.png"));
         SpriteSheet FireBallDownsheet = new SpriteSheet(Images.loadImage("/Sheets/FireBallDown.png"));
-
+//        BufferedImage[] moneyBag = new SpriteSheet(Images.loadImage("/Sheets/money bag.png"));
 
 
         blocks = new BufferedImage[15];
@@ -74,6 +75,7 @@ public class Images {
         butstart = new BufferedImage[3];
         particleSmoke = new BufferedImage[3];
         items = new BufferedImage[3];
+        moneyBag = new BufferedImage[0];
         numbers = new BufferedImage[21];
         Resume = new BufferedImage[2];
         BTitle = new BufferedImage[2];
