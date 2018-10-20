@@ -29,6 +29,7 @@ public class Player extends CreatureBase {
 	public Item firee = Item.fireRuneItem;
 	public Item rocky = Item.rockItem;
 	public Item money = Item.moneyBagItem;
+	public Item health2 = Item.healthpotion;
 	private ArrayList<Item> inventoryItems;
 
 
@@ -89,6 +90,8 @@ public class Player extends CreatureBase {
 
 	@Override
 	public void tick() {
+			
+
 		//Animations
 		animDown.tick();
 		animUp.tick();
@@ -125,7 +128,7 @@ public class Player extends CreatureBase {
 			readyFireAttack();
 		}
 		if(handler.getKeyManager().keyJustPressed(KeyEvent.VK_SHIFT)) {
-			handler.getWorld().getEntityManager().getPlayer().setHealth(75);;
+			handler.getWorld().getEntityManager().getPlayer().setHealth(75);
 		}
 		if(handler.getKeyManager().keyJustPressed(KeyEvent.VK_X)) {
 
@@ -133,6 +136,7 @@ public class Player extends CreatureBase {
 			handler.getWorld().getEntityManager().getPlayer().getInventory().addItem(firee);
 			handler.getWorld().getEntityManager().getPlayer().getInventory().addItem(hwhood);
 			handler.getWorld().getEntityManager().getPlayer().getInventory().addItem(money);
+			handler.getWorld().getEntityManager().getPlayer().getInventory().addItem(health2);
 		}
 
 		// Attack

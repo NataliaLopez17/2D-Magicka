@@ -21,17 +21,12 @@
 			<location>C:/Users/NATALIA E/Desktop/Magika/companionItem.png</location>
 		</link>
 		<link>
-			<name>res/Sheets/gate.png</name>
-			<type>1</type>
-			<location>C:/Users/NATALIA E/Desktop/Magika/gate.png</location>
-		</link>
-		<link>
-			<name>res/Sheets/health potion.png</name>
+			<name>res/Sheets/healthPotion.png</name>
 			<type>1</type>
 			<location>C:/Users/NATALIA E/Desktop/Magika/health potion.png</location>
 		</link>
 		<link>
-			<name>res/Sheets/money bag.png</name>
+			<name>res/Sheets/moneyBag.png</name>
 			<type>1</type>
 			<location>C:/Users/NATALIA E/Desktop/Magika/money bag.png</location>
 		</link>
@@ -39,6 +34,11 @@
 			<name>res/Sheets/newObject.png</name>
 			<type>1</type>
 			<location>C:/Users/NATALIA E/Desktop/Magika/newObject.png</location>
+		</link>
+		<link>
+			<name>res/music/LaptopBreak.wav</name>
+			<type>1</type>
+			<location>C:/Users/NATALIA E/Desktop/Magika/Glass_Smashing_Sound_Effect-BHRbT3x5hZk.wav</location>
 		</link>
 	</linkedResources>
 </projectDescription>

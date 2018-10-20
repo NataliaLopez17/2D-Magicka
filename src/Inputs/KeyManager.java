@@ -44,7 +44,7 @@ public class KeyManager implements KeyListener {
 		fattbut = keys[KeyEvent.VK_C];
 		pbutt = keys[KeyEvent.VK_ESCAPE];
 		
-		skip = keys[KeyEvent.VK_T];
+		skip = keys[KeyEvent.VK_TAB];
 		regen = keys[KeyEvent.VK_SHIFT];
 		give = keys[KeyEvent.VK_X];
 

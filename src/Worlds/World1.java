@@ -4,6 +4,7 @@ import Game.Entities.Creatures.Player;
 import Game.Entities.Creatures.SkelyEnemy;
 import Game.Entities.Statics.*;
 import Main.Handler;
+import Game.Entities.Statics.Laptop;
 
 /**
  * Created by Elemental on 1/2/2017.
@@ -28,6 +29,10 @@ public class World1 extends BaseWorld{
         entityManager.addEntity(new Rock(handler, 700, 83));
         entityManager.addEntity(new Door(handler, 100, 0,caveWorld));
         entityManager.addEntity(new SkelyEnemy(handler, 1250, 500));
+//        entityManager.addEntity(new Laptop(handler, 270, 270));
+//        entityManager.addEntity(new Laptop(handler, 900, 380));
+//        entityManager.addEntity(new Laptop(handler, 190, 560));
+//        entityManager.addEntity(new Laptop(handler, 888, 1000));
 
         entityManager.getPlayer().setX(spawnX);
         entityManager.getPlayer().setY(spawnY);

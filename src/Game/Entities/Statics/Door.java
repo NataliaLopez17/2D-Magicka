@@ -31,7 +31,7 @@ public class Door extends StaticEntity {
         health=10000000;
         bounds.x=0;
         bounds.y=0;
-        bounds.width = 100;
+        bounds.width = 50;
         bounds.height = 64;
 
         ir.width = bounds.width;
@@ -55,11 +55,10 @@ public class Door extends StaticEntity {
         }else if(!handler.getKeyManager().attbut){
             EP=false;
         }
-
+//hi
     }
     @Override
     public void render(Graphics g) {
-    	System.out.println(Tree.COUNTER);
         if (Tree.COUNTER >= 1) {
         	g.drawImage(Images.door,(int)(x-handler.getGameCamera().getxOffset()),(int)(y-handler.getGameCamera().getyOffset()),width,height,null);
 

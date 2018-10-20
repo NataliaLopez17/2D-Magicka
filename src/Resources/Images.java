@@ -27,7 +27,6 @@ public class Images {
     public static BufferedImage[] butstart;
     public static BufferedImage[] particleSmoke;
     public static BufferedImage[] items;
-    public static BufferedImage[] newitem;
     public static BufferedImage[] numbers;
     public static BufferedImage inventory;
     public static BufferedImage title;
@@ -46,7 +45,8 @@ public class Images {
     public static BufferedImage[] FireBallDown;
     public static BufferedImage loading;
     public static BufferedImage spellGUI;
-    public static BufferedImage[] moneyBag;
+    public static BufferedImage moneyBag;
+	public static BufferedImage healthpotion;
 
 
     public Images() {
@@ -58,7 +58,6 @@ public class Images {
         SpriteSheet FireBallRightsheet = new SpriteSheet(Images.loadImage("/Sheets/FireBallRight.png"));
         SpriteSheet FireBallUpsheet = new SpriteSheet(Images.loadImage("/Sheets/FireBallUp.png"));
         SpriteSheet FireBallDownsheet = new SpriteSheet(Images.loadImage("/Sheets/FireBallDown.png"));
-        SpriteSheet moneybag = new SpriteSheet(Images.loadImage("/Sheets/money bag.png"));
 
 
         blocks = new BufferedImage[15];
@@ -76,7 +75,6 @@ public class Images {
         butstart = new BufferedImage[3];
         particleSmoke = new BufferedImage[3];
         items = new BufferedImage[3];
-        newitem = new BufferedImage[3];
         
         numbers = new BufferedImage[21];
         Resume = new BufferedImage[2];
@@ -96,6 +94,8 @@ public class Images {
 
             loading = ImageIO.read(getClass().getResourceAsStream("/Sheets/loading.png"));
             spellGUI = ImageIO.read(getClass().getResourceAsStream("/Sheets/SpellGUI.png"));
+            moneyBag = ImageIO.read(getClass().getResourceAsStream("/Sheets/moneyBag.png"));
+            healthpotion = ImageIO.read(getClass().getResourceAsStream("/Sheets/healthPotion.png"));
 
             inventory = ImageIO.read(getClass().getResourceAsStream("/Sheets/guit.png"));
             title = ImageIO.read(getClass().getResourceAsStream("/Sheets/Title.png"));
@@ -166,9 +166,7 @@ public class Images {
             particleSmoke[2]= newsheet.crop(154,400,20,35);
             
             items[0]= newsheet.crop(114,448,30,24);//log
-            newitem[0] = moneybag.crop(0, 0, 443, 482);
-            
-
+           
             numbers[1]= numsheet.crop(17,15,17,22);
             numbers[2]= numsheet.crop(64,16,14,19);
             numbers[3]= numsheet.crop(110,16,14,19);
