@@ -16,140 +16,116 @@ import java.util.ArrayList;
  */
 public class Inventory {
 
-    private Handler handler;
-    private boolean active = false;
-    private UIManager uiManager;
-    private ArrayList<Item> inventoryItems;
+	private Handler handler;
+	private boolean active = false;
+	private UIManager uiManager;
+	private ArrayList<Item> inventoryItems;
 
 
-    public Inventory(Handler handler){
+	public Inventory(Handler handler){
 
-        this.handler=handler;
-        inventoryItems = new ArrayList<>();
+		this.handler=handler;
+		inventoryItems = new ArrayList<>();
 
-        uiManager = new UIManager(handler);
+		uiManager = new UIManager(handler);
 
-        uiManager.addObjects(new UIInventory(0,0, 329, 265, Images.inventory,() -> {
-        }));
-    }
+		uiManager.addObjects(new UIInventory(0,0, 329, 265, Images.inventory,() -> {
+		}));
+	}
 
-    public void tick() {
+	public void tick() {
 
-        for(Item i : inventoryItems){
-            if(i.getCount()==0){
-                inventoryItems.remove(inventoryItems.indexOf(i));
-                return;
-            }
-        }
+		for(Item i : inventoryItems){
+			if(i.getCount()==0){
+				inventoryItems.remove(inventoryItems.indexOf(i));
+				return;
+			}
+		}
 
-        if(handler.getKeyManager().keyJustPressed(KeyEvent.VK_Q)){
-            active=!active;
-            handler.getWorld().getEntityManager().getPlayer().getSpellGUI().setActive(false);
+		if(handler.getKeyManager().keyJustPressed(KeyEvent.VK_Q)){
+			active=!active;
+			handler.getWorld().getEntityManager().getPlayer().getSpellGUI().setActive(false);
 
-        }
+		}
 
-        if(!active){
-            return;
-        }
+		if(!active){
+			return;
+		}
 
-        handler.getMouseManager().setUimanager(uiManager);
-        uiManager.tick();
-
-
-
-    }
-
-    public void render(Graphics g) {
-
-        if(!active){
-            uiManager.isActive(uiManager.getObjects(),false);
-            return;
-        }
+		handler.getMouseManager().setUimanager(uiManager);
+		uiManager.tick();
 
 
 
-        uiManager.isActive(uiManager.getObjects(),true);
-        uiManager.Render(g);
-        g.setColor(Color.white);
-        renderItems(g);
+	}
+
+	public void render(Graphics g) {
+
+		if(!active){
+			uiManager.isActive(uiManager.getObjects(),false);
+			return;
+		}
 
 
-    }
 
-    //Inventory Methods
-    private void renderItems(Graphics g) {
-
-        if (inventoryItems.size() == 1) {
-            g.drawImage(inventoryItems.get(0).getTexture(), 25, 24, inventoryItems.get(0).getWidth(), inventoryItems.get(0).getHeight(), null);
-            g.drawString(String.valueOf(inventoryItems.get(0).getCount()), 25+33,25+35);
-        }else if(inventoryItems.size() == 2) {
-            g.drawImage(inventoryItems.get(0).getTexture(), 25, 24, inventoryItems.get(0).getWidth(), inventoryItems.get(0).getHeight(), null);
-            g.drawString(String.valueOf(inventoryItems.get(0).getCount()), 25+33,25+35);
-            g.drawImage(inventoryItems.get(1).getTexture(), 86, 24, inventoryItems.get(1).getWidth(), inventoryItems.get(1).getHeight(), null);
-            g.drawString(String.valueOf(inventoryItems.get(1).getCount()), 86+33,25+35);
-        }else if(inventoryItems.size() == 3) {
-            g.drawImage(inventoryItems.get(0).getTexture(), 25, 24, inventoryItems.get(0).getWidth(), inventoryItems.get(0).getHeight(), null);
-            g.drawString(String.valueOf(inventoryItems.get(0).getCount()), 25+33,25+35);
-            g.drawImage(inventoryItems.get(1).getTexture(), 86, 24, inventoryItems.get(1).getWidth(), inventoryItems.get(1).getHeight(), null);
-            g.drawString(String.valueOf(inventoryItems.get(1).getCount()), 86+33,25+35);
-            g.drawImage(inventoryItems.get(2).getTexture(), 147, 24, inventoryItems.get(2).getWidth(), inventoryItems.get(2).getHeight(), null);
-            g.drawString(String.valueOf(inventoryItems.get(2).getCount()), 147+33,25+35);
-        }
-        else if(inventoryItems.size() == 4) {
-        	g.drawImage(inventoryItems.get(0).getTexture(), 25, 24, inventoryItems.get(0).getWidth(), inventoryItems.get(0).getHeight(), null);
-            g.drawString(String.valueOf(inventoryItems.get(0).getCount()), 25+33,25+35);
-            g.drawImage(inventoryItems.get(1).getTexture(), 86, 24, inventoryItems.get(1).getWidth(), inventoryItems.get(1).getHeight(), null);
-            g.drawString(String.valueOf(inventoryItems.get(1).getCount()), 86+33,25+35);
-            g.drawImage(inventoryItems.get(2).getTexture(), 147, 24, inventoryItems.get(2).getWidth(), inventoryItems.get(2).getHeight(), null);
-            g.drawString(String.valueOf(inventoryItems.get(2).getCount()), 147+33,25+35);
-            g.drawImage(inventoryItems.get(3).getTexture(), 208, 24, inventoryItems.get(3).getWidth(), inventoryItems.get(3).getHeight(), null);
-            g.drawString(String.valueOf(inventoryItems.get(3).getCount()), 208+33,25+35);
-        }
-        else if(inventoryItems.size() == 5) {
-        	g.drawImage(inventoryItems.get(0).getTexture(), 25, 24, inventoryItems.get(0).getWidth(), inventoryItems.get(0).getHeight(), null);
-            g.drawString(String.valueOf(inventoryItems.get(0).getCount()), 25+33,25+35);
-            g.drawImage(inventoryItems.get(1).getTexture(), 86, 24, inventoryItems.get(1).getWidth(), inventoryItems.get(1).getHeight(), null);
-            g.drawString(String.valueOf(inventoryItems.get(1).getCount()), 86+33,25+35);
-            g.drawImage(inventoryItems.get(2).getTexture(), 147, 24, inventoryItems.get(2).getWidth(), inventoryItems.get(2).getHeight(), null);
-            g.drawString(String.valueOf(inventoryItems.get(2).getCount()), 147+33,25+35);
-            g.drawImage(inventoryItems.get(3).getTexture(), 208, 24, inventoryItems.get(3).getWidth(), inventoryItems.get(3).getHeight(), null);
-            g.drawString(String.valueOf(inventoryItems.get(3).getCount()), 208+33,25+35);
-            g.drawImage(inventoryItems.get(4).getTexture(), 269, 24, inventoryItems.get(4).getWidth(), inventoryItems.get(4).getHeight(), null);
-            g.drawString(String.valueOf(inventoryItems.get(4).getCount()), 269+33,25+35);
-            
-        }
+		uiManager.isActive(uiManager.getObjects(),true);
+		uiManager.Render(g);
+		g.setColor(Color.white);
+		renderItems(g);
 
 
-    }
+	}
 
-    public void addItem(Item item){
-        for(Item i : inventoryItems){
-            if(i.getId() == item.getId()){
-                i.setCount(i.getCount() + /*item.getCount()*/ 1);
-                return;
-            }
-        }
-        if(item.getId()==2){
-            handler.getWorld().getEntityManager().getPlayer().getSpellGUI().addSpell(new FireBallSpell(handler));
-        }
-        inventoryItems.add(item);
+	//Inventory Methods
+	private void renderItems(Graphics g) {
+		int row1 = 0;
+		int row2  = 0;
+		int row3 = 0;
+		for(int i = 0; i < inventoryItems.size(); i++) {
+			if(i < 5) {
+				g.drawImage(inventoryItems.get(i).getTexture(), 25 + row1, 24, inventoryItems.get(i).getWidth(), inventoryItems.get(i).getHeight(), null);
+				g.drawString(String.valueOf(inventoryItems.get(i).getCount()), 25 + row1 + 33,25+35);
+				row1 = row1 + 61;
+			}
+			if(i > 5 && i < 10) {
+				g.drawImage(inventoryItems.get(i).getTexture(), row2 + 61,86, inventoryItems.get(i).getWidth(), inventoryItems.get(i).getHeight(), null);
+				g.drawString(String.valueOf(inventoryItems.get(i).getCount()), (row2+60)+33,120);
+			}
+			if (i>=10) {
+				g.drawImage(inventoryItems.get(i).getTexture(), row3 + 61, 148, inventoryItems.get(i).getWidth(), inventoryItems.get(i).getHeight(), null);
+				g.drawString(String.valueOf(inventoryItems.get(i).getCount()), (row3+60)+ 33, 180);
+				row3+=60;
+			}
+		}
+	}
 
-    }
+	public void addItem(Item item){
+		for(Item i : inventoryItems){
+			if(i.getId() == item.getId()){
+				i.setCount(i.getCount() + 1);
+				return;
+			}
+		}
+		if(item.getId()==2){
+			handler.getWorld().getEntityManager().getPlayer().getSpellGUI().addSpell(new FireBallSpell(handler));
+		}
+		inventoryItems.add(item);
 
-    //GET SET
-    public Handler getHandler() {
-        return handler;
-    }
+	}
+	//GET SET
+	public Handler getHandler() {
+		return handler;
+	}
 
-    public void setHandler(Handler handler) {
-        this.handler = handler;
-    }
+	public void setHandler(Handler handler) {
+		this.handler = handler;
+	}
 
-    public ArrayList<Item> getInventoryItems(){
-        return inventoryItems;
-    }
+	public ArrayList<Item> getInventoryItems(){
+		return inventoryItems;
+	}
 
-    public void setActive(boolean active) {
-        this.active = active;
-    }
+	public void setActive(boolean active) {
+		this.active = active;
+	}
 }

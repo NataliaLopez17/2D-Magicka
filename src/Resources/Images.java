@@ -50,6 +50,7 @@ public class Images {
     public static BufferedImage moneyBag;
 	public static BufferedImage healthpotion;
 	public static BufferedImage laptopObject;
+	public static BufferedImage keyItem;
 
 
     public Images() {
@@ -99,7 +100,9 @@ public class Images {
             spellGUI = ImageIO.read(getClass().getResourceAsStream("/Sheets/SpellGUI.png"));
             moneyBag = ImageIO.read(getClass().getResourceAsStream("/Sheets/moneyBag.png"));
             healthpotion = ImageIO.read(getClass().getResourceAsStream("/Sheets/healthPotion.png"));
-            laptopObject = ImageIO.read(getClass().getResourceAsStream("/Sheets/newObject.png"));
+            laptopObject = ImageIO.read(getClass().getResourceAsStream("/Sheets/newObject.png")); 
+            keyItem = ImageIO.read(getClass().getResourceAsStream("/Sheets/key.png"));
+            
 
             inventory = ImageIO.read(getClass().getResourceAsStream("/Sheets/guit.png"));
             title = ImageIO.read(getClass().getResourceAsStream("/Sheets/Title.png"));
