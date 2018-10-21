@@ -16,6 +16,7 @@ import java.util.Random;
  */
 public class Laptop extends StaticEntity {
 
+//	help please
     private File audioFile;
     private AudioInputStream audioStream;
     private AudioFormat format;
@@ -34,7 +35,7 @@ public class Laptop extends StaticEntity {
         health=16;
 
         try {
-            audioFile = new File("/music/LaptopBreak.wav");
+            audioFile = new File("res/music/windowsShutdown.wav");
             audioStream = AudioSystem.getAudioInputStream(audioFile);
             format = audioStream.getFormat();
             info = new DataLine.Info(Clip.class, format);
@@ -71,7 +72,7 @@ public class Laptop extends StaticEntity {
     @Override
     public void render(Graphics g) {
         renderLife(g);
-        g.drawImage(Images.blocks[14],(int)(x-handler.getGameCamera().getxOffset()),(int)(y-handler.getGameCamera().getyOffset()),width,height,null);
+        g.drawImage(Images.laptopObject,(int)(x-handler.getGameCamera().getxOffset()),(int)(y-handler.getGameCamera().getyOffset()),width,height,null);
 
     }
 

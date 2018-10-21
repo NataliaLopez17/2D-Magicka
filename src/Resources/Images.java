@@ -2,6 +2,8 @@ package Resources;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
+
+import java.awt.Image;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 
@@ -47,6 +49,7 @@ public class Images {
     public static BufferedImage spellGUI;
     public static BufferedImage moneyBag;
 	public static BufferedImage healthpotion;
+	public static BufferedImage laptopObject;
 
 
     public Images() {
@@ -96,6 +99,7 @@ public class Images {
             spellGUI = ImageIO.read(getClass().getResourceAsStream("/Sheets/SpellGUI.png"));
             moneyBag = ImageIO.read(getClass().getResourceAsStream("/Sheets/moneyBag.png"));
             healthpotion = ImageIO.read(getClass().getResourceAsStream("/Sheets/healthPotion.png"));
+            laptopObject = ImageIO.read(getClass().getResourceAsStream("/Sheets/newObject.png"));
 
             inventory = ImageIO.read(getClass().getResourceAsStream("/Sheets/guit.png"));
             title = ImageIO.read(getClass().getResourceAsStream("/Sheets/Title.png"));
@@ -204,6 +208,8 @@ public class Images {
             blocks[12] = newsheet.crop(0,260,Bwidth,Bheight);//mossyrock
             blocks[13] = newsheet.crop(176,0,Bwidth,Bheight*2);//tree
             blocks[14] = newsheet.crop(174,410,78,74);//rock
+            
+//            laptopObject = laptopObject.getSubimage(174, 410, 78, 74);
 
 
             //player anim

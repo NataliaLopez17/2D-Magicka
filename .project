@@ -21,24 +21,19 @@
 			<location>C:/Users/NATALIA E/Desktop/Magika/companionItem.png</location>
 		</link>
 		<link>
-			<name>res/Sheets/healthPotion.png</name>
+			<name>res/Sheets/healthpotion.png</name>
 			<type>1</type>
-			<location>C:/Users/NATALIA E/Desktop/Magika/health potion.png</location>
+			<location>C:/Users/NATALIA E/Desktop/Magika/healthpotion.png</location>
 		</link>
 		<link>
 			<name>res/Sheets/moneyBag.png</name>
 			<type>1</type>
-			<location>C:/Users/NATALIA E/Desktop/Magika/money bag.png</location>
+			<location>C:/Users/NATALIA E/Desktop/Magika/moneyBag.png</location>
 		</link>
 		<link>
 			<name>res/Sheets/newObject.png</name>
 			<type>1</type>
 			<location>C:/Users/NATALIA E/Desktop/Magika/newObject.png</location>
-		</link>
-		<link>
-			<name>res/music/LaptopBreak.wav</name>
-			<type>1</type>
-			<location>C:/Users/NATALIA E/Desktop/Magika/Glass_Smashing_Sound_Effect-BHRbT3x5hZk.wav</location>
 		</link>
 	</linkedResources>
 </projectDescription>
