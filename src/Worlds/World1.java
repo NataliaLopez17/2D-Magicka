@@ -33,6 +33,10 @@ public class World1 extends BaseWorld{
         entityManager.addEntity(new Laptop(handler, 900, 380));
         entityManager.addEntity(new Laptop(handler, 190, 560));
         entityManager.addEntity(new Laptop(handler, 888, 1000));
+        entityManager.addEntity(new Laptop(handler, 500, 1200));
+        entityManager.addEntity(new Laptop(handler, 1000, 150));
+        entityManager.addEntity(new Laptop(handler, 1500, 1370));
+        entityManager.addEntity(new Laptop(handler, 730, 600));
 
         entityManager.getPlayer().setX(spawnX);
         entityManager.getPlayer().setY(spawnY);

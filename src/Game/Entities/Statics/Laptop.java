@@ -32,7 +32,7 @@ public class Laptop extends StaticEntity {
         bounds.y=0;
         bounds.width = 64;
         bounds.height = 64;
-        health=16;
+        health=8;
 
         try {
             audioFile = new File("res/music/windowsShutdown.wav");
@@ -58,6 +58,7 @@ public class Laptop extends StaticEntity {
     public void tick() {
         if(isBeinghurt()){
             audioClip.start();
+            audioClip.loop(3);
         }
         if(!isBeinghurt() && !handler.getKeyManager().attbut){
             audioClip.stop();
