@@ -51,6 +51,11 @@ public class Images {
 	public static BufferedImage healthpotion;
 	public static BufferedImage laptopObject;
 	public static BufferedImage keyItem;
+	public static BufferedImage niceCreamTrader;
+	public static BufferedImage[] Papyrus_right;
+    public static BufferedImage[] Papyrus_left;
+    public static BufferedImage[] Papyrus_front;
+    public static BufferedImage[] Papyrus_back;
 
 
     public Images() {
@@ -62,7 +67,7 @@ public class Images {
         SpriteSheet FireBallRightsheet = new SpriteSheet(Images.loadImage("/Sheets/FireBallRight.png"));
         SpriteSheet FireBallUpsheet = new SpriteSheet(Images.loadImage("/Sheets/FireBallUp.png"));
         SpriteSheet FireBallDownsheet = new SpriteSheet(Images.loadImage("/Sheets/FireBallDown.png"));
-
+//        SpriteSheet papyrusSheet = new SpriteSheet(Images.loadImage("/Sheets/Papyrus.png"));
 
         blocks = new BufferedImage[15];
 
@@ -70,11 +75,17 @@ public class Images {
         player_right = new BufferedImage[4];
         player_front = new BufferedImage[4];
         player_back = new BufferedImage[4];
+        
 
         SkelyEnemy_left = new BufferedImage[4];
         SkelyEnemy_right = new BufferedImage[4];
         SkelyEnemy_front = new BufferedImage[4];
         SkelyEnemy_back = new BufferedImage[4];
+        
+        Papyrus_left = new BufferedImage[4];
+        Papyrus_right = new BufferedImage[4];
+        Papyrus_front = new BufferedImage[4];
+        Papyrus_back = new BufferedImage[4];
 
         butstart = new BufferedImage[3];
         particleSmoke = new BufferedImage[3];
@@ -102,6 +113,8 @@ public class Images {
             healthpotion = ImageIO.read(getClass().getResourceAsStream("/Sheets/healthPotion.png"));
             laptopObject = ImageIO.read(getClass().getResourceAsStream("/Sheets/newObject.png")); 
             keyItem = ImageIO.read(getClass().getResourceAsStream("/Sheets/key.png"));
+            niceCreamTrader = ImageIO.read(getClass().getResourceAsStream("/Sheets/niceCreamGuy.png"));
+            
             
 
             inventory = ImageIO.read(getClass().getResourceAsStream("/Sheets/guit.png"));
@@ -235,6 +248,33 @@ public class Images {
             player_back[1]=newsheet.crop(164,227,width,height);
             player_back[2]=newsheet.crop(196,227,width,height);
             player_back[3]=newsheet.crop(228,227,28,height);
+            
+            
+//            why wont this work???
+            
+//            Papyrus_front[0]=papyrusSheet.crop(4,63,width,height);
+//            Papyrus_front[1]=papyrusSheet.crop(164,131,width,height);
+//            Papyrus_front[2]=papyrusSheet.crop(196,131,width,height);
+//            Papyrus_front[3]=papyrusSheet.crop(228,131,28,height);
+//
+//            player_left[0]=papyrusSheet.crop(132,163,width,height);
+//            player_left[1]=papyrusSheet.crop(164,163,width,height);
+//            player_left[2]=papyrusSheet.crop(196,163,width,height);
+//            player_left[3]=papyrusSheet.crop(228,163,28,height);
+//
+//            player_right[0]=papyrusSheet.crop(132,195,width,height);
+//            player_right[1]=papyrusSheet.crop(164,195,width,height);
+//            player_right[2]=papyrusSheet.crop(196,195,width,height);
+//            player_right[3]=papyrusSheet.crop(228,195,28,height);
+//
+//            player_back[0]=papyrusSheet.crop(132,227,width,height);
+//            player_back[1]=papyrusSheet.crop(164,227,width,height);
+//            player_back[2]=papyrusSheet.crop(196,227,width,height);
+//            player_back[3]=papyrusSheet.crop(228,227,28,height);
+     
+            
+            
+            
 
             //Skely enemy anim
             SkelyEnemy_front[0]=newsheet.crop(132,131+130,width,height);

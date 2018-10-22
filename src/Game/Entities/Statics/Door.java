@@ -15,24 +15,25 @@ import java.awt.*;
  * Created by Elemental on 2/2/2017.
  */
 
-
+//create nicecream... again
+//here we go again
 public class Door extends StaticEntity {
 
     private Rectangle ir = new Rectangle();
     public Boolean EP = false;
-    private Boolean doorz = true;
-    private Item money1 = Item.moneyBagItem;
+//    private Boolean doorz = true;
+//    private Item money1 = Item.moneyBagItem;
 
     private BaseWorld world;
 
     public Door(Handler handler, float x, float y,BaseWorld world) {
-        super(handler, x, y, 64, 100);
+        super(handler, 120, y, 140, 100);
         this.world=world;
         health=10000000;
         bounds.x=0;
         bounds.y=0;
-        bounds.width = 50;
-        bounds.height = 64;
+        bounds.width = 110;
+        bounds.height = 110;
 
         ir.width = bounds.width;
         ir.height = bounds.height;
