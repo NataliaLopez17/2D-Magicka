@@ -15,14 +15,10 @@ import java.awt.*;
  * Created by Elemental on 2/2/2017.
  */
 
-//create nicecream... again
-//here we go again
 public class Door extends StaticEntity {
 
     private Rectangle ir = new Rectangle();
     public Boolean EP = false;
-//    private Boolean doorz = true;
-//    private Item money1 = Item.moneyBagItem;
 
     private BaseWorld world;
 

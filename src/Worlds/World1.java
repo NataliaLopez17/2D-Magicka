@@ -38,7 +38,6 @@ public class World1 extends BaseWorld{
         entityManager.addEntity(new Laptop(handler, 1500, 1370));
         entityManager.addEntity(new Laptop(handler, 730, 600));
 //        entityManager.addEntity(new NiceCreamTrader(handler, 800, 20));
-//        entityManager.addEntity(new PapyrusTrader(handler, 300, 480));
 
         entityManager.getPlayer().setX(spawnX);
         entityManager.getPlayer().setY(spawnY);
