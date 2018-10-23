@@ -4,6 +4,7 @@ import Game.Entities.Creatures.Player;
 import Main.Handler;
 import Resources.Images;
 import Game.Items.Item;
+import java.awt.event.KeyEvent;
 import java.awt.*;
 /**
  * Created by Elemental on 2/2/2017.
@@ -15,6 +16,10 @@ public class NiceCreamTrader extends StaticEntity {
 	public Boolean EP = false;
 	public int moneyCount = Item.moneyBagItem.getCount();
 	public int keyCount = Item.keyItem.getCount();
+	public int ccount = 0;
+	public int ccount2 = 0;
+	public static int COUNTER;
+	
 
 	public NiceCreamTrader(Handler handler, float x, float y) {
 		super(handler, x, y, 100, 120);
@@ -54,8 +59,8 @@ public class NiceCreamTrader extends StaticEntity {
 		checkForPlayer(g, handler.getWorld().getEntityManager().getPlayer());
 		moneyCount = moneyCount - 1;
 		keyCount = keyCount - 1;
-		System.out.println(moneyCount);
-		System.out.println(keyCount);
+		//System.out.println(moneyCount);
+		//System.out.println(keyCount);
 
 
 
@@ -73,8 +78,37 @@ public class NiceCreamTrader extends StaticEntity {
 			g.setColor(Color.WHITE);
 			g.drawImage(Images.E,(int)(810-handler.getGameCamera().getxOffset()),(int)(y-handler.getGameCamera().getyOffset()),30,30,null);
 			g.drawImage(Images.tradeBox,(int)(920-handler.getGameCamera().getxOffset()),(int)(y-handler.getGameCamera().getyOffset()),300,100,null);
-			g.drawString(String.valueOf(Item.moneyBagItem.getCount() + "/3"), (int)(1060-handler.getGameCamera().getxOffset()),(int)(75-handler.getGameCamera().getyOffset()));
-			g.drawString(String.valueOf(Item.keyItem.getCount() + "/1"), (int)(1165-handler.getGameCamera().getxOffset()),(int)(75-handler.getGameCamera().getyOffset()));
+			if (ccount == 0)
+				g.drawString("0/3", (int)(1060-handler.getGameCamera().getxOffset()),(int)(75-handler.getGameCamera().getyOffset()));
+			if (ccount2 == 0)
+				g.drawString(String.valueOf("0/1"), (int)(1165-handler.getGameCamera().getxOffset()),(int)(75-handler.getGameCamera().getyOffset()));
+			for (Item i : handler.getWorld().getEntityManager().getPlayer().getInventory().getInventoryItems()) {
+				if (i.getName() == "Money Bag") {
+					ccount = 1;
+					g.drawString(String.valueOf(i.getCount() + "/3"), (int)(1060-handler.getGameCamera().getxOffset()),(int)(75-handler.getGameCamera().getyOffset()));
+				}
+				
+				if (i.getName() == "KeyItem") {
+					ccount2 = 1;
+					g.drawString(String.valueOf(Item.keyItem.getCount() + "/1"), (int)(1165-handler.getGameCamera().getxOffset()),(int)(75-handler.getGameCamera().getyOffset()));
+				}
+				else {
+					continue;
+				}
+			}
+			if(handler.getKeyManager().keyJustPressed(KeyEvent.VK_L) && Item.moneyBagItem.getCount() >= 3 && Item.keyItem.getCount() >= 1) {
+				ccount = 0;
+				ccount2 = 0;
+				COUNTER = 1;
+				for (Item j : handler.getWorld().getEntityManager().getPlayer().getInventory().getInventoryItems()) {
+					if (j.getName() == "Money Bag") {
+						j.setCount(j.getCount() - 3);
+					}
+					if (j.getName() == "KeyItem") {
+						j.setCount(j.getCount() - 1);
+					}
+				}
+			}
 
 			if(handler.getKeyManager().attbut) {
 				g.drawString(String.valueOf((Item.moneyBagItem.getCount() - moneyCount) + "/3"), (int)(1060-handler.getGameCamera().getxOffset()),(int)(75-handler.getGameCamera().getyOffset()));

@@ -1,10 +1,10 @@
 package Game.Entities.Statics;
 
 import Game.Entities.Creatures.Player;
+import Game.Entities.Statics.NiceCreamTrader;
 import Main.Handler;
 import Resources.Images;
 import Worlds.BaseWorld;
-import Game.Entities.Statics.Tree;
 
 import java.awt.*;
 
@@ -53,7 +53,7 @@ public class Door extends StaticEntity {
     }
     @Override
     public void render(Graphics g) {
-        if (Tree.COUNTER >= 1) {
+        if (NiceCreamTrader.COUNTER >= 1) {
         	g.drawImage(Images.door,(int)(x-handler.getGameCamera().getxOffset()),(int)(y-handler.getGameCamera().getyOffset()),width,height,null);
 
 	        g.setColor(Color.black);

@@ -87,6 +87,16 @@ public class Player extends CreatureBase {
 
 	@Override
 	public void tick() {
+		for (Item i : handler.getWorld().getEntityManager().getPlayer().getInventory().getInventoryItems()) {
+			if (i.getName() == "health potion") {
+				handler.getWorld().getEntityManager().getPlayer().setHealth(75);
+				i.setCount(i.getCount() - 1);
+			}
+			else {
+				continue;
+			}
+		}
+			
 			
 
 		//Animations
