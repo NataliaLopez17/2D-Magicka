@@ -86,10 +86,13 @@ public class Inventory {
 				g.drawImage(inventoryItems.get(i).getTexture(), 25 + row1, 24, inventoryItems.get(i).getWidth(), inventoryItems.get(i).getHeight(), null);
 				g.drawString(String.valueOf(inventoryItems.get(i).getCount()), 25 + row1 + 33,25+35);
 				row1 = row1 + 61;
+				
 			}
 			if(i > 5 && i < 10) {
 				g.drawImage(inventoryItems.get(i).getTexture(), row2 + 61,86, inventoryItems.get(i).getWidth(), inventoryItems.get(i).getHeight(), null);
 				g.drawString(String.valueOf(inventoryItems.get(i).getCount()), (row2+60)+33,120);
+				row2 = row2 + 61;
+	
 			}
 			if (i>=10) {
 				g.drawImage(inventoryItems.get(i).getTexture(), row3 + 61, 148, inventoryItems.get(i).getWidth(), inventoryItems.get(i).getHeight(), null);

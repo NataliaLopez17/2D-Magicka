@@ -1,13 +1,10 @@
 package Game.Entities.Creatures;
 
 import Worlds.BaseWorld;
-import Game.Items.*;
-import Worlds.CaveWorld;
 import Game.Entities.EntityBase;
 import Game.GameStates.State;
 import Game.Inventories.Inventory;
 import Game.Items.Item;
-import Game.SpellCast.FireBallSpell;
 import Game.SpellCast.SpellCastUI;
 import Resources.Animation;
 import Resources.Images;

@@ -1,18 +1,10 @@
 package Game.Entities.Statics;
 
 import Game.Entities.Creatures.Player;
-import Game.GameStates.State;
 import Main.Handler;
 import Resources.Images;
-import Worlds.BaseWorld;
-import Game.Inventories.Inventory;
 import Game.Items.Item;
-import UI.UIInventory;
-import UI.UIManager;
-
 import java.awt.*;
-import java.awt.event.KeyEvent;
-
 /**
  * Created by Elemental on 2/2/2017.
  */
@@ -21,9 +13,8 @@ public class NiceCreamTrader extends StaticEntity {
 
 	private Rectangle ir = new Rectangle();
 	public Boolean EP = false;
-	public int moneyCounter = 3;
-	public int keyCounter = 1;
-//	public int ccount = Item.moneyBagItem.getCount() + 1;
+	public int moneyCount = Item.moneyBagItem.getCount();
+	public int keyCount = Item.keyItem.getCount();
 
 	public NiceCreamTrader(Handler handler, float x, float y) {
 		super(handler, x, y, 100, 120);
@@ -51,15 +42,21 @@ public class NiceCreamTrader extends StaticEntity {
 
 		if(handler.getKeyManager().attbut){
 			EP=true;
-
+			
 		}else if(!handler.getKeyManager().attbut){
 			EP=false;
+
 		}
 	}
 	@Override
 	public void render(Graphics g) {
 		g.drawImage(Images.niceCreamTrader,(int)(x-handler.getGameCamera().getxOffset()),(int)(y-handler.getGameCamera().getyOffset()),width,height,null);
 		checkForPlayer(g, handler.getWorld().getEntityManager().getPlayer());
+		moneyCount = moneyCount - 1;
+		keyCount = keyCount - 1;
+		System.out.println(moneyCount);
+		System.out.println(keyCount);
+
 
 
 
@@ -77,17 +74,29 @@ public class NiceCreamTrader extends StaticEntity {
 			g.drawImage(Images.E,(int)(810-handler.getGameCamera().getxOffset()),(int)(y-handler.getGameCamera().getyOffset()),30,30,null);
 			g.drawImage(Images.tradeBox,(int)(920-handler.getGameCamera().getxOffset()),(int)(y-handler.getGameCamera().getyOffset()),300,100,null);
 			g.drawString(String.valueOf(Item.moneyBagItem.getCount() + "/3"), (int)(1060-handler.getGameCamera().getxOffset()),(int)(75-handler.getGameCamera().getyOffset()));
-		}
-		else if(ir.contains(pr) && EP){
-			g.drawImage(Images.EP,(int)(810-handler.getGameCamera().getxOffset()),(int)(y-handler.getGameCamera().getyOffset()),30,30,null);
-			g.drawImage(Images.tradeBox,(int)(920-handler.getGameCamera().getxOffset()),(int)(y-handler.getGameCamera().getyOffset()),300,100,null);
-			if(handler.getKeyManager().keyJustPressed(KeyEvent.VK_E)) {
+			g.drawString(String.valueOf(Item.keyItem.getCount() + "/1"), (int)(1165-handler.getGameCamera().getxOffset()),(int)(75-handler.getGameCamera().getyOffset()));
 
+			if(handler.getKeyManager().attbut) {
+				g.drawString(String.valueOf((Item.moneyBagItem.getCount() - moneyCount) + "/3"), (int)(1060-handler.getGameCamera().getxOffset()),(int)(75-handler.getGameCamera().getyOffset()));
+				
+				
+				g.drawString(String.valueOf((Item.keyItem.getCount() - keyCount) + "/1"), (int)(1165-handler.getGameCamera().getxOffset()),(int)(75-handler.getGameCamera().getyOffset()));
+				
 			}
 
+
+			else if(ir.contains(pr) && EP){
+				g.drawImage(Images.EP,(int)(810-handler.getGameCamera().getxOffset()),(int)(y-handler.getGameCamera().getyOffset()),30,30,null);
+				g.drawImage(Images.tradeBox,(int)(920-handler.getGameCamera().getxOffset()),(int)(y-handler.getGameCamera().getyOffset()),300,100,null);
+
+
+				if(handler.getKeyManager().attbut) {
+					g.drawString(String.valueOf((Item.moneyBagItem.getCount() - moneyCount) + "/3"), (int)(1060-handler.getGameCamera().getxOffset()),(int)(75-handler.getGameCamera().getyOffset()));
+					g.drawString(String.valueOf((Item.keyItem.getCount() - keyCount) + "/1"), (int)(1165-handler.getGameCamera().getxOffset()),(int)(75-handler.getGameCamera().getyOffset()));
+
+				}
+			}
 		}
-
-
 	}
 
 	@Override

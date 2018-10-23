@@ -32,7 +32,7 @@ public class Laptop extends StaticEntity {
         bounds.y=0;
         bounds.width = 64;
         bounds.height = 64;
-        health=8;
+        health=16;
 
         try {
             audioFile = new File("res/music/windowsShutdown.wav");
@@ -58,7 +58,7 @@ public class Laptop extends StaticEntity {
     public void tick() {
         if(isBeinghurt()){
             audioClip.start();
-            audioClip.loop(3);
+            audioClip.loop(1);
         }
         if(!isBeinghurt() && !handler.getKeyManager().attbut){
             audioClip.stop();
@@ -79,7 +79,7 @@ public class Laptop extends StaticEntity {
 
     @Override
     public void die() {
-    	if (handler.getWorld().getEntityManager().getPlayer().health2.isPickedUp() == false) {
+    	if (handler.getWorld().getEntityManager().getPlayer().health2.isPickedUp() == true) {
     		handler.getWorld().getEntityManager().getPlayer().setHealth(75);
     	}
         randint=new Random();

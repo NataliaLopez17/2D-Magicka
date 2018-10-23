@@ -1,12 +1,9 @@
 package Game.Entities.Statics;
 
 import Game.Entities.Creatures.Player;
-import Game.GameStates.State;
 import Main.Handler;
 import Resources.Images;
 import Worlds.BaseWorld;
-import Game.Inventories.Inventory;
-import Game.Items.Item;
 import Game.Entities.Statics.Tree;
 
 import java.awt.*;
@@ -52,7 +49,7 @@ public class Door extends StaticEntity {
         }else if(!handler.getKeyManager().attbut){
             EP=false;
         }
-//hi
+
     }
     @Override
     public void render(Graphics g) {
