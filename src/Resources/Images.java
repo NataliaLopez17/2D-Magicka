@@ -306,6 +306,28 @@ public class Images {
             NewEnemy_back[1]=NewEnemy.crop(37,2005,width + 4,height + 25);
             NewEnemy_back[2]=NewEnemy.crop(74,2005,width + 4,height + 25);
             NewEnemy_back[3]=NewEnemy.crop(110,2005,28 + 4,height + 25);
+            
+          //Companion Animation
+            companion_front[0]=companion.crop(40,9,width,height);
+            companion_front[1]=companion.crop(268,9,width,height);
+            companion_front[2]=companion.crop(505,9,width,height);
+            companion_front[3]=companion.crop(747,9,width,height);
+            
+            companion_left[0]=companionLeft.crop(3,526,width,height);
+            companion_left[1]=companionLeft.crop(30,526,width,height);
+            companion_left[2]=companionLeft.crop(56,526,width,height);
+            companion_left[3]=companionLeft.crop(82,526,width,height);
+            
+            companion_right[0]=companion.crop(17,316,width,height);
+            companion_right[1]=companion.crop(205,316,width,height);
+            companion_right[2]=companion.crop(385,316,width,height);
+            companion_right[3]=companion.crop(565,316,width,height);
+            
+            companion_back[0]=companion.crop(0,9,width,height);
+            companion_back[1]=companion.crop(1290,9,width,height);
+            companion_back[2]=companion.crop(1524,9,width,height);
+            companion_back[3]=companion.crop(1764,9,width,height);
+            
 
         } catch (IOException e) {
             e.printStackTrace();
