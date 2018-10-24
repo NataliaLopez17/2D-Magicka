@@ -1,5 +1,6 @@
 package Worlds;
 import Worlds.World1;
+import Game.Entities.Creatures.NewEnemy;
 import Game.Entities.Creatures.Player;
 import Game.Entities.Statics.Door;
 import Main.Handler;
@@ -19,6 +20,7 @@ public class CaveWorld extends BaseWorld{
         world1 = new BaseWorld(handler,"res/Maps/map1.map",player);
         
         entityManager.addEntity(new Door(handler, 100, 0, world1));
+        entityManager.addEntity(new NewEnemy(handler, 1200, 400));
 
     }
 

@@ -25,6 +25,11 @@ public class Images {
     public static BufferedImage[] SkelyEnemy_left;
     public static BufferedImage[] SkelyEnemy_front;
     public static BufferedImage[] SkelyEnemy_back;
+    public static BufferedImage[] NewEnemy_back;
+    public static BufferedImage[] NewEnemy_front;
+    public static BufferedImage[] NewEnemy_right;
+    public static BufferedImage[] NewEnemy_left;
+    
     public static BufferedImage[] butstart;
     public static BufferedImage[] particleSmoke;
     public static BufferedImage[] items;
@@ -34,6 +39,8 @@ public class Images {
     public static BufferedImage door;
     public static BufferedImage E;
     public static BufferedImage EP;
+    public static BufferedImage L;
+    public static BufferedImage LP;
     public static BufferedImage Pause;
     public static BufferedImage[] Resume;
     public static BufferedImage[] BTitle;
@@ -62,6 +69,7 @@ public class Images {
         SpriteSheet FireBallRightsheet = new SpriteSheet(Images.loadImage("/Sheets/FireBallRight.png"));
         SpriteSheet FireBallUpsheet = new SpriteSheet(Images.loadImage("/Sheets/FireBallUp.png"));
         SpriteSheet FireBallDownsheet = new SpriteSheet(Images.loadImage("/Sheets/FireBallDown.png"));
+        SpriteSheet NewEnemy = new SpriteSheet(Images.loadImage("/Sheets/Undyne.png"));
 
 
         blocks = new BufferedImage[15];
@@ -76,6 +84,11 @@ public class Images {
         SkelyEnemy_right = new BufferedImage[4];
         SkelyEnemy_front = new BufferedImage[4];
         SkelyEnemy_back = new BufferedImage[4];
+        
+        NewEnemy_left = new BufferedImage[4];
+        NewEnemy_right = new BufferedImage[4];
+        NewEnemy_front = new BufferedImage[4];
+        NewEnemy_back = new BufferedImage[4];
 
         butstart = new BufferedImage[3];
         particleSmoke = new BufferedImage[3];
@@ -112,6 +125,8 @@ public class Images {
             door = ImageIO.read(getClass().getResourceAsStream("/Sheets/Door.png"));
             E = ImageIO.read(getClass().getResourceAsStream("/Buttons/E.png"));
             EP = ImageIO.read(getClass().getResourceAsStream("/Buttons/EP.png"));
+            L = ImageIO.read(getClass().getResourceAsStream("/Buttons/L.png"));
+            LP = ImageIO.read(getClass().getResourceAsStream("/Buttons/LP.png"));
             Pause = ImageIO.read(getClass().getResourceAsStream("/Buttons/Pause.png"));
             Resume[0] = ImageIO.read(getClass().getResourceAsStream("/Buttons/Resume.png"));
             Resume[1] = ImageIO.read(getClass().getResourceAsStream("/Buttons/ResumeP.png"));
@@ -258,6 +273,27 @@ public class Images {
             SkelyEnemy_back[1]=newsheet.crop(164,227+130,width,height);
             SkelyEnemy_back[2]=newsheet.crop(196,227+130,width,height);
             SkelyEnemy_back[3]=newsheet.crop(228,227+130,28,height);
+            
+            //NewEnemy Animation
+            NewEnemy_front[0]=NewEnemy.crop(0,1782,width + 4,height + 25);
+            NewEnemy_front[1]=NewEnemy.crop(37,1782,width + 4,height + 25);
+            NewEnemy_front[2]=NewEnemy.crop(74,1782,width + 4,height + 25);
+            NewEnemy_front[3]=NewEnemy.crop(110,1782,28 + 4,height + 25);
+            
+            NewEnemy_left[0]=NewEnemy.crop(0,1860,width - 2,height + 25);
+            NewEnemy_left[1]=NewEnemy.crop(32,1860,width - 2,height + 25);
+            NewEnemy_left[2]=NewEnemy.crop(66,1860,width - 2,height + 25);
+            NewEnemy_left[3]=NewEnemy.crop(95,1860,width - 2,height + 25);
+            
+            NewEnemy_right[0]=NewEnemy.crop(0,1932,width - 2,height + 25);
+            NewEnemy_right[1]=NewEnemy.crop(32,1932,width - 2,height + 25);
+            NewEnemy_right[2]=NewEnemy.crop(66,1932,width - 2,height + 25);
+            NewEnemy_right[3]=NewEnemy.crop(95,1932,width - 2,height + 25);
+            
+            NewEnemy_back[0]=NewEnemy.crop(0,2005,width + 4,height + 25);
+            NewEnemy_back[1]=NewEnemy.crop(37,2005,width + 4,height + 25);
+            NewEnemy_back[2]=NewEnemy.crop(74,2005,width + 4,height + 25);
+            NewEnemy_back[3]=NewEnemy.crop(110,2005,28 + 4,height + 25);
 
         } catch (IOException e) {
             e.printStackTrace();

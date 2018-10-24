@@ -1,5 +1,6 @@
 package Worlds;
 
+import Game.Entities.Creatures.NewEnemy;
 //import Game.Entities.Creatures.PapyrusTrader;
 import Game.Entities.Creatures.Player;
 import Game.Entities.Creatures.SkelyEnemy;
