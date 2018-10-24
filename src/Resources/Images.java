@@ -29,6 +29,10 @@ public class Images {
     public static BufferedImage[] NewEnemy_front;
     public static BufferedImage[] NewEnemy_right;
     public static BufferedImage[] NewEnemy_left;
+    public static BufferedImage[] companion_back;
+    public static BufferedImage[] companion_front;
+    public static BufferedImage[] companion_right;
+    public static BufferedImage[] companion_left;
     
     public static BufferedImage[] butstart;
     public static BufferedImage[] particleSmoke;
@@ -70,6 +74,9 @@ public class Images {
         SpriteSheet FireBallUpsheet = new SpriteSheet(Images.loadImage("/Sheets/FireBallUp.png"));
         SpriteSheet FireBallDownsheet = new SpriteSheet(Images.loadImage("/Sheets/FireBallDown.png"));
         SpriteSheet NewEnemy = new SpriteSheet(Images.loadImage("/Sheets/Undyne.png"));
+        SpriteSheet companionLeft = new SpriteSheet(Images.loadImage("/Sheets/Sans.png"));
+        SpriteSheet companion = new SpriteSheet(Images.loadImage("/Asuna.png"));
+        
 
 
         blocks = new BufferedImage[15];
@@ -89,6 +96,11 @@ public class Images {
         NewEnemy_right = new BufferedImage[4];
         NewEnemy_front = new BufferedImage[4];
         NewEnemy_back = new BufferedImage[4];
+        
+        companion_left = new BufferedImage[4];
+        companion_right = new BufferedImage[4];
+        companion_front = new BufferedImage[4];
+        companion_back = new BufferedImage[4];
 
         butstart = new BufferedImage[3];
         particleSmoke = new BufferedImage[3];
