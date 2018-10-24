@@ -59,8 +59,6 @@ public class NiceCreamTrader extends StaticEntity {
 		checkForPlayer(g, handler.getWorld().getEntityManager().getPlayer());
 		moneyCount = moneyCount - 1;
 		keyCount = keyCount - 1;
-		//System.out.println(moneyCount);
-		//System.out.println(keyCount);
 
 
 

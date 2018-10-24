@@ -6,6 +6,7 @@ import Game.Items.Item;
 import Main.Handler;
 import Resources.Animation;
 import Resources.Images;
+import Game.Entities.Creatures.SkelyEnemy;
 
 import java.awt.*;
 import java.util.Random;
@@ -13,7 +14,7 @@ import java.util.Random;
 /**
  * Created by Elemental on 2/7/2017.
  */
-public class NewEnemy extends CreatureBase  {
+public class companion extends CreatureBase  {
 
 
 	private Animation animDown, animUp, animLeft, animRight;
@@ -21,8 +22,8 @@ public class NewEnemy extends CreatureBase  {
 	private Boolean attacking=false;
 
 	private int animWalkingSpeed = 100;
-	private Inventory Newinventory;
-	private Rectangle NewCam;
+	private Inventory companionInventory;
+	private Rectangle companionCam;
 
 	private int healthcounter =0;
 
@@ -30,28 +31,28 @@ public class NewEnemy extends CreatureBase  {
 	private int moveCount=0;
 	private int direction;
 
-	public NewEnemy(Handler handler, float x, float y) {
-		super(handler, x, y, 120, 70);
+	public companion(Handler handler, float x, float y) {
+		super(handler, x, y, CreatureBase.DEFAULT_CREATURE_WIDTH, CreatureBase.DEFAULT_CREATURE_HEIGHT);
 		bounds.x=8*2;
 		bounds.y=18*2;
 		bounds.width=16*2;
 		bounds.height=14*2;
-		speed=2.3f;
+		speed=2.0f;
 		health=50;
 
-		NewCam= new Rectangle();
+		companionCam= new Rectangle();
 
 
 
 		randint = new Random();
 		direction = randint.nextInt(4) + 1;
 
-		animDown = new Animation(animWalkingSpeed, Images.NewEnemy_front);
-		animLeft = new Animation(animWalkingSpeed,Images.NewEnemy_left);
-		animRight = new Animation(animWalkingSpeed,Images.NewEnemy_right);
-		animUp = new Animation(animWalkingSpeed,Images.NewEnemy_back);
+		animDown = new Animation(animWalkingSpeed, Images.companion_front);
+		animLeft = new Animation(animWalkingSpeed,Images.companion_left);
+		animRight = new Animation(animWalkingSpeed,Images.companion_right);
+		animUp = new Animation(animWalkingSpeed,Images.companion_back);
 
-		Newinventory= new Inventory(handler);
+		companionInventory= new Inventory(handler);
 	}
 
 	@Override
@@ -83,7 +84,7 @@ public class NewEnemy extends CreatureBase  {
 		}
 
 
-		Newinventory.tick();
+		companionInventory.tick();
 
 
 	}
@@ -93,13 +94,16 @@ public class NewEnemy extends CreatureBase  {
 		xMove = 0;
 		yMove = 0;
 
-		NewCam.x = (int) (x - handler.getGameCamera().getxOffset() - (64 * 3));
-		NewCam.y = (int) (y - handler.getGameCamera().getyOffset() - (64 * 3));
-		NewCam.width = 64 * 7;
-		NewCam.height = 64 * 7;
+		companionCam.x = (int) (x - handler.getGameCamera().getxOffset() - (64 * 3));
+		companionCam.y = (int) (y - handler.getGameCamera().getyOffset() - (64 * 3));
+		companionCam.width = 64 * 7;
+		companionCam.height = 64 * 7;
 
-		if (NewCam.contains(handler.getWorld().getEntityManager().getPlayer().getX() - handler.getGameCamera().getxOffset(), handler.getWorld().getEntityManager().getPlayer().getY() - handler.getGameCamera().getyOffset())
-				|| NewCam.contains(handler.getWorld().getEntityManager().getPlayer().getX() - handler.getGameCamera().getxOffset() + handler.getWorld().getEntityManager().getPlayer().getWidth(), handler.getWorld().getEntityManager().getPlayer().getY() - handler.getGameCamera().getyOffset() + handler.getWorld().getEntityManager().getPlayer().getHeight())) {
+		if (companionCam.contains(handler.getWorld().getEntityManager().getPlayer().getX() - handler.getGameCamera().getxOffset(), handler.getWorld().getEntityManager().getPlayer().getY() - handler.getGameCamera().getyOffset())
+				|| companionCam.contains(handler.getWorld().getEntityManager().getPlayer().getX() -
+						handler.getGameCamera().getxOffset() + 
+						handler.getWorld().getEntityManager().getPlayer().getWidth(), handler.getWorld().getEntityManager().getPlayer().getY() - 
+						handler.getGameCamera().getyOffset() + handler.getWorld().getEntityManager().getPlayer().getHeight())) {
 
 			Rectangle cb = getCollisionBounds(0, 0);
 			Rectangle ar = new Rectangle();
@@ -178,7 +182,7 @@ public class NewEnemy extends CreatureBase  {
 
 	@Override
 	public void render(Graphics g) {
-		g.drawImage(getCurrentAnimationFrame(animDown,animUp,animLeft,animRight,Images.NewEnemy_front,Images.NewEnemy_back,Images.NewEnemy_left,Images.NewEnemy_right), (int) (x - handler.getGameCamera().getxOffset()), (int) (y - handler.getGameCamera().getyOffset()), width, height, null);
+		g.drawImage(getCurrentAnimationFrame(animDown,animUp,animLeft,animRight,Images.companion_front,Images.companion_back,Images.companion_left,Images.companion_right), (int) (x - handler.getGameCamera().getxOffset()), (int) (y - handler.getGameCamera().getyOffset()), width, height, null);
 		if(isBeinghurt() && healthcounter<=120){
 			g.setColor(Color.white);
 			g.drawString("SkelyHealth: " + getHealth(),(int) (x-handler.getGameCamera().getxOffset()),(int) (y-handler.getGameCamera().getyOffset()-20));
