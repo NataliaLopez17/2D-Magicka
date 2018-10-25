@@ -30,15 +30,17 @@ public class companion extends CreatureBase  {
 	private Random randint;
 	private int moveCount=0;
 	private int direction;
+	
+//	private SkelyEnemy skelyEnemy = handler.getWorld().;
 
 	public companion(Handler handler, float x, float y) {
-		super(handler, x, y, CreatureBase.DEFAULT_CREATURE_WIDTH, CreatureBase.DEFAULT_CREATURE_HEIGHT);
+		super(handler, x, y, 64, 64);
 		bounds.x=8*2;
 		bounds.y=18*2;
 		bounds.width=16*2;
 		bounds.height=14*2;
-		speed=2.0f;
-		health=50;
+		speed=2.5f;
+		health=100;
 
 		companionCam= new Rectangle();
 
@@ -126,12 +128,14 @@ public class companion extends CreatureBase  {
 			}
 
 			for (EntityBase e : handler.getWorld().getEntityManager().getEntities()) {
-				if (e.equals(this))
+				if (e.equals(this)) {
 					continue;
+				}
 				if (e.getCollisionBounds(0, 0).intersects(ar) && e.equals(handler.getWorld().getEntityManager().getPlayer())) {
-
-					checkAttacks();
-					return;
+					continue;
+				}
+				if (e.getCollisionBounds(0, 0).intersects(ar) && e.equals(handler.getWorld().getEntityManager().getPlayer())) {
+					
 				}
 			}
 

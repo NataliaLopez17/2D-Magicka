@@ -74,8 +74,7 @@ public class Images {
         SpriteSheet FireBallUpsheet = new SpriteSheet(Images.loadImage("/Sheets/FireBallUp.png"));
         SpriteSheet FireBallDownsheet = new SpriteSheet(Images.loadImage("/Sheets/FireBallDown.png"));
         SpriteSheet NewEnemy = new SpriteSheet(Images.loadImage("/Sheets/Undyne.png"));
-        SpriteSheet companionLeft = new SpriteSheet(Images.loadImage("/Sheets/Sans.png"));
-        SpriteSheet companion = new SpriteSheet(Images.loadImage("/Sheets/Asuna.png"));
+        SpriteSheet companion = new SpriteSheet(Images.loadImage("/Sheets/newCompanionSheet.png"));
         
 
 
@@ -308,25 +307,26 @@ public class Images {
             NewEnemy_back[3]=NewEnemy.crop(110,2005,28 + 4,height + 25);
             
           //Companion Animation
-            companion_front[0]=companion.crop(0,10,240,312);
-            companion_front[1]=companion.crop(268,10,240,312);
-            companion_front[2]=companion.crop(505,10,240,312);
-            companion_front[3]=companion.crop(747,10,240,312);
+            companion_front[0]=companion.crop(28,20,31,35);
+            companion_front[1]=companion.crop(56,20,31,35);
+            companion_front[2]=companion.crop(84,20,31,35);
+            companion_front[3]=companion.crop(112,20,31,35);
            
-            companion_left[0]=companionLeft.crop(3,526,25,33);
-            companion_left[1]=companionLeft.crop(30,526,25,33);
-            companion_left[2]=companionLeft.crop(56,526,25,33);
-            companion_left[3]=companionLeft.crop(82,526,25,33);
+            companion_left[0] = companion.crop(22, 71, 22, 35);
+            companion_left[1] = companion.crop(44, 71, 22, 35);
+            companion_left[2] = companion.crop(66, 71, 22, 35);
+            companion_left[3] = companion.crop(88, 71, 22, 35);
             
-            companion_right[0]=companion.crop(17,316,185,312);
-            companion_right[1]=companion.crop(211,316,185,312);
-            companion_right[2]=companion.crop(389,316,185,312);
-            companion_right[3]=companion.crop(566,316,185,312);
+            companion_right[0] = companion.crop(22, 122, 22, 35);
+            companion_right[1] = companion.crop(44, 122, 22, 35);
+            companion_right[2] = companion.crop(66, 122, 22, 35);
+            companion_right[3] = companion.crop(88, 122, 22, 35);
             
-            companion_back[0]=companion.crop(0,9,240,312);
-            companion_back[1]=companion.crop(1290,9,240,312);
-            companion_back[2]=companion.crop(1524,9,240,312);
-            companion_back[3]=companion.crop(1764,9,240,312);
+            
+            companion_back[0]=companion.crop(28,173,31,35);
+            companion_back[1]=companion.crop(56,173,31,35);
+            companion_back[2]=companion.crop(84,173,31,35);
+            companion_back[3]=companion.crop(112,173,31,35);
             
 
         } catch (IOException e) {

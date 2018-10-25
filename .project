@@ -31,14 +31,14 @@
 			<location>C:/Users/NATALIA E/Desktop/Magika/moneyBag.png</location>
 		</link>
 		<link>
+			<name>res/Sheets/newCompanionSheet.png</name>
+			<type>1</type>
+			<location>C:/Users/NATALIA E/Desktop/Magika/newCompanionSheet.png</location>
+		</link>
+		<link>
 			<name>res/Sheets/newObject.png</name>
 			<type>1</type>
 			<location>C:/Users/NATALIA E/Desktop/Magika/newObject.png</location>
-		</link>
-		<link>
-			<name>res/Sheets/sansRight.png</name>
-			<type>1</type>
-			<location>C:/Users/NATALIA E/Desktop/Magika/sansRight.png</location>
 		</link>
 		<link>
 			<name>res/Sheets/undertale_box.png</name>
