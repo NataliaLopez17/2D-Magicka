@@ -65,8 +65,6 @@ public class Images {
 	public static BufferedImage niceCreamTrader;
 	public static BufferedImage tradeBox;
 	public static BufferedImage companionItem;
-	public static BufferedImage teleportCompanion;
-	public static BufferedImage summonCompanion;
 
     public Images() {
 
@@ -78,7 +76,7 @@ public class Images {
         SpriteSheet FireBallUpsheet = new SpriteSheet(Images.loadImage("/Sheets/FireBallUp.png"));
         SpriteSheet FireBallDownsheet = new SpriteSheet(Images.loadImage("/Sheets/FireBallDown.png"));
         SpriteSheet NewEnemy = new SpriteSheet(Images.loadImage("/Sheets/Undyne.png"));
-        SpriteSheet companion = new SpriteSheet(Images.loadImage("/Sheets/companion.png"));
+        SpriteSheet Sans = new SpriteSheet(Images.loadImage("/Sheets/companion.png"));
         SpriteSheet thirdWorld = new SpriteSheet(Images.loadImage("/Sheets/thirdWorldmore.png"));
         SpriteSheet moreThirdWorld = new SpriteSheet(Images.loadImage("/Sheets/thirdWorldmore.png"));
 
@@ -136,8 +134,6 @@ public class Images {
             niceCreamTrader = ImageIO.read(getClass().getResourceAsStream("/Sheets/niceCreamGuy.png"));
             tradeBox = ImageIO.read(getClass().getResourceAsStream("/Sheets/undertale_box.png"));
             companionItem = ImageIO.read(getClass().getResourceAsStream("/Sheets/companionItem.png"));
-            teleportCompanion = ImageIO.read(getClass().getResourceAsStream("/Sheets/nether_star.png"));
-            summonCompanion = ImageIO.read(getClass().getResourceAsStream("/Sheets/nether_star.png"));
 
             inventory = ImageIO.read(getClass().getResourceAsStream("/Sheets/guit.png"));
             title = ImageIO.read(getClass().getResourceAsStream("/Sheets/Title.png"));
@@ -345,25 +341,25 @@ public class Images {
             NewEnemy_back[2]=NewEnemy.crop(74,2005,width + 4,height + 25);
             NewEnemy_back[3]=NewEnemy.crop(110,2005,28 + 4,height + 25);
             
-            companion_front[0] = companion.crop(0, 20, width-3, height);
-            companion_front[1] = companion.crop(31, 20, width-3, height);
-            companion_front[2] = companion.crop(60, 20, width-3, height);
-            companion_front[3] = companion.crop(86, 20, width-3, height);
+            companion_front[0] = Sans.crop(0, 20, width-3, height);
+            companion_front[1] = Sans.crop(31, 20, width-3, height);
+            companion_front[2] = Sans.crop(60, 20, width-3, height);
+            companion_front[3] = Sans.crop(86, 20, width-3, height);
 
-            companion_left[0] = companion.crop(0, 71, width-8, height);
-            companion_left[1] = companion.crop(25, 71, width-8, height);
-            companion_left[2] = companion.crop(47, 71, width-8, height);
-            companion_left[3] = companion.crop(70, 71, width-8, height);
+            companion_left[0] = Sans.crop(0, 71, width-8, height);
+            companion_left[1] = Sans.crop(25, 71, width-8, height);
+            companion_left[2] = Sans.crop(47, 71, width-8, height);
+            companion_left[3] = Sans.crop(70, 71, width-8, height);
             
-            companion_right[0] = companion.crop(0, 122, width-8, height);
-            companion_right[1] = companion.crop(25, 122, width-8, height);
-            companion_right[2] = companion.crop(47, 122, width-8, height);
-            companion_right[3] = companion.crop(70, 122, width-8, height);
+            companion_right[0] = Sans.crop(0, 122, width-8, height);
+            companion_right[1] = Sans.crop(25, 122, width-8, height);
+            companion_right[2] = Sans.crop(47, 122, width-8, height);
+            companion_right[3] = Sans.crop(70, 122, width-8, height);
             
-            companion_back[0] = companion.crop(0, 173, width-3, height);
-            companion_back[1] = companion.crop(31, 173, width-3, height);
-            companion_back[2] = companion.crop(60, 173, width-3, height);
-            companion_back[3] = companion.crop(86, 173, width-3, height );
+            companion_back[0] = Sans.crop(0, 173, width-3, height);
+            companion_back[1] = Sans.crop(31, 173, width-3, height);
+            companion_back[2] = Sans.crop(60, 173, width-3, height);
+            companion_back[3] = Sans.crop(86, 173, width-3, height );
 
         } catch (IOException e) {
             e.printStackTrace();

@@ -18,7 +18,7 @@ public class NewEnemy extends CreatureBase  {
 
 	private Animation animDown, animUp, animLeft, animRight;
 
-//	private Boolean attacking=false;
+	//	private Boolean attacking=false;
 
 	private int animWalkingSpeed = 100;
 	private Inventory Newinventory;
@@ -29,6 +29,8 @@ public class NewEnemy extends CreatureBase  {
 	private Random randint;
 	private int moveCount=0;
 	private int direction;
+	
+	public static int count = 0;
 
 	public NewEnemy(Handler handler, float x, float y) {
 		super(handler, x, y,120, 70);

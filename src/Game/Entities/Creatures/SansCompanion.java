@@ -13,7 +13,7 @@ import java.util.Random;
 /**
  * Created by Elemental on 2/7/2017.
  */
-public class companion extends CreatureBase  {
+public class SansCompanion extends CreatureBase  {
 
 
     private Animation animDown, animUp, animLeft, animRight;
@@ -30,7 +30,7 @@ public class companion extends CreatureBase  {
     private int moveCount=0;
     private int direction;
 
-    public companion(Handler handler, float x, float y) {
+    public SansCompanion(Handler handler, float x, float y) {
         super(handler, x, y, 64, 64);
         bounds.x=8*2;
         bounds.y=18*2;
@@ -179,7 +179,7 @@ public class companion extends CreatureBase  {
         g.drawImage(getCurrentAnimationFrame(animDown,animUp,animLeft,animRight,Images.companion_front,Images.companion_back,Images.companion_left,Images.companion_right), (int) (x - handler.getGameCamera().getxOffset()), (int) (y - handler.getGameCamera().getyOffset()), width, height, null);
         if(isBeinghurt() && healthcounter<=120){
             g.setColor(Color.white);
-            g.drawString("SansHealth: " + getHealth(),(int) (x-handler.getGameCamera().getxOffset()),(int) (y-handler.getGameCamera().getyOffset()-20));
+            g.drawString("Sans Health: " + getHealth(),(int) (x-handler.getGameCamera().getxOffset()),(int) (y-handler.getGameCamera().getyOffset()-20));
         }
     }
 
@@ -188,8 +188,5 @@ public class companion extends CreatureBase  {
 
     @Override
     public void die() {
-    	handler.getWorld().getItemManager().addItem(Item.healthpotion.createNew((int)x + bounds.x,(int)y + bounds.y,1));
-
-
     }
 }

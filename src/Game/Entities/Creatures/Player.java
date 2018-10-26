@@ -21,7 +21,6 @@ import java.util.ArrayList;
 
 public class Player extends CreatureBase {
 
-	private BaseWorld caveWorld;
 	public Item[] itemslist = Item.items;
 	public Item hwhood = Item.woodItem;
 	public Item firee = Item.fireRuneItem;
@@ -29,9 +28,6 @@ public class Player extends CreatureBase {
 	public Item money = Item.moneyBagItem;
 	public Item health2 = Item.healthpotion;
 	public Item companionItem = Item.companionItem;
-	private ArrayList<Item> inventoryItems;
-
-
 	//Animations
 	private Animation animDown, animUp, animLeft, animRight,animFireATT,animFireATTR,animFireATTU,animFireATTD;
 
@@ -56,7 +52,6 @@ public class Player extends CreatureBase {
 	private int animWalkingSpeed = 150;
 	private int animFireSpeed = 250;
 	private int FireSpeed = 2;
-	private int FireMove = 0;
 	private int movexp,moveyp,movexn,moveyn,tempmoveyp,tempmovexn,tempmoveyn,tempmovexp,fy,fx;
 
 	//spells
@@ -130,7 +125,6 @@ public class Player extends CreatureBase {
 		}
 
 		if(FireBall){
-			FireMove++;
 		}
 
 

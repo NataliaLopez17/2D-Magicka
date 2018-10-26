@@ -1,6 +1,5 @@
 package Worlds;
 
-//import Game.Entities.Creatures.PapyrusTrader;
 import Game.Entities.Creatures.Player;
 import Game.Entities.Creatures.SkelyEnemy;
 import Game.Entities.Statics.Door;
@@ -9,6 +8,7 @@ import Game.Entities.Statics.NiceCreamTrader;
 import Game.Entities.Statics.Rock;
 import Game.Entities.Statics.Tree;
 import Main.Handler;
+import Worlds.TheCoreWorld;
 
 /**
  * Created by Elemental on 1/2/2017.
@@ -16,6 +16,8 @@ import Main.Handler;
 public class World1 extends BaseWorld{
 
     public static BaseWorld caveWorld;
+    public static BaseWorld theCoreWorld;
+    
 
     public World1(Handler handler, String path, Player player){
         super(handler,path,player);
@@ -31,6 +33,7 @@ public class World1 extends BaseWorld{
         entityManager.addEntity(new Tree(handler, 77, 700));
         entityManager.addEntity(new Rock(handler, 700, 83));
         entityManager.addEntity(new Door(handler, 100, 0,caveWorld));
+//        entityManager.addEntity(new Door(handler, 100, 0,theCoreWorld));
         entityManager.addEntity(new SkelyEnemy(handler, 1250, 500));
         entityManager.addEntity(new Laptop(handler, 270, 270));
         entityManager.addEntity(new Laptop(handler, 900, 380));

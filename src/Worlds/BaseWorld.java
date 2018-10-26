@@ -5,14 +5,13 @@ import java.awt.event.KeyEvent;
 
 import Game.Entities.EntityManager;
 import Game.Entities.Creatures.Player;
-import Game.Entities.Creatures.companion;
+import Game.Entities.Creatures.SansCompanion;
 import Game.GameStates.State;
 import Game.Items.Item;
 import Game.Items.ItemManager;
 import Game.Tiles.Tile;
 import Main.Handler;
 import Resources.Utils;
-import Game.Entities.Statics.SummonCompanion;
 
 /**
  * Created by Elemental on 2/10/2017.
@@ -45,7 +44,7 @@ public class BaseWorld {
 
 	public void tick(){
 		if(handler.getKeyManager().keyJustPressed(KeyEvent.VK_G) && Item.companionItem.getCount() >= 1) {
-			entityManager.addEntity(new companion(handler, handler.getWorld().getEntityManager().getPlayer().getX(), handler.getWorld().getEntityManager().getPlayer().getY() - 25));
+			entityManager.addEntity(new SansCompanion(handler, handler.getWorld().getEntityManager().getPlayer().getX(), handler.getWorld().getEntityManager().getPlayer().getY() - 25));
 			Item.companionItem.setCount(0);
 			for (Item j : handler.getWorld().getEntityManager().getPlayer().getInventory().getInventoryItems()) {
 				if (j.getName() == "CompanionItem") {
@@ -53,9 +52,7 @@ public class BaseWorld {
 				}
 			}
 		}
-		if(SummonCompanion.summon >= 1) {
-			entityManager.addEntity(new companion(handler, handler.getWorld().getEntityManager().getPlayer().getX(), handler.getWorld().getEntityManager().getPlayer().getY()));
-		}
+		
 		entityManager.tick();
 		itemManager.tick();
 		countP++;

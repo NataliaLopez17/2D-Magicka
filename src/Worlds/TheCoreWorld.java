@@ -1,8 +1,7 @@
 package Worlds;
 import Game.Entities.Creatures.NewEnemy;
 import Game.Entities.Creatures.Player;
-import Game.Entities.Creatures.companion;
-import Game.Entities.Statics.Door;
+import Game.Entities.Creatures.SansCompanion;
 import Main.Handler;
 
 /**
@@ -11,17 +10,17 @@ import Main.Handler;
 public class TheCoreWorld extends BaseWorld{
     private Handler handler;
     private Player player;
-    public static BaseWorld CaveWorld;
+//    public static BaseWorld caveWorld;
 
     public TheCoreWorld(Handler handler, String path, Player player) {
         super(handler,path,player);
         this.handler = handler;
         this.player=player;
-        CaveWorld = new BaseWorld(handler,"res/Maps/third World map.map",player);
+//        caveWorld = new CaveWorld(handler,"res/Maps/third World map.map",player);
         
-        entityManager.addEntity(new Door(handler, 100, 0, CaveWorld));
+//        entityManager.addEntity(new Door(handler, 100, 0, caveWorld));
         entityManager.addEntity(new NewEnemy(handler, 1200, 400));
-        entityManager.addEntity(new companion(handler, 100, 30));
+        entityManager.addEntity(new SansCompanion(handler, 100, 30));
 
     }
 
