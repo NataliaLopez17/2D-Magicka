@@ -1,9 +1,7 @@
 package Game.GameStates;
 
 import Game.Entities.Creatures.Player;
-import Game.Entities.Creatures.SansCompanion;
 import Main.Handler;
-import Resources.Images;
 import Worlds.BaseWorld;
 import Worlds.World1;
 

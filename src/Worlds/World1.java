@@ -8,7 +8,6 @@ import Game.Entities.Statics.NiceCreamTrader;
 import Game.Entities.Statics.Rock;
 import Game.Entities.Statics.Tree;
 import Main.Handler;
-import Worlds.TheCoreWorld;
 
 /**
  * Created by Elemental on 1/2/2017.

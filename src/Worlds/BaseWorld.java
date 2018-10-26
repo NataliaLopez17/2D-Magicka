@@ -23,6 +23,8 @@ public class BaseWorld {
 	protected int spawnX, spawnY;
 	protected int[][] tiles;
 	protected int countP = 0;
+	
+	protected int stopFollowingMeSans = 0;
 
 	protected EntityManager entityManager;
 
@@ -49,6 +51,7 @@ public class BaseWorld {
 			for (Item j : handler.getWorld().getEntityManager().getPlayer().getInventory().getInventoryItems()) {
 				if (j.getName() == "CompanionItem") {
 					j.setCount(j.getCount() - 1);
+					stopFollowingMeSans++;
 				}
 			}
 		}

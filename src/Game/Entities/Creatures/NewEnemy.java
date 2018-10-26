@@ -34,12 +34,12 @@ public class NewEnemy extends CreatureBase  {
 
 	public NewEnemy(Handler handler, float x, float y) {
 		super(handler, x, y,120, 70);
-		bounds.x=8*2;
-		bounds.y=18*2;
-		bounds.width=16*2;
-		bounds.height=14*2;
+		bounds.x=25;
+		bounds.y=42;
+		bounds.width=42;
+		bounds.height=42;
 		speed=1.5f;
-		health=50;
+		health=2;
 
 		NewCam= new Rectangle();
 

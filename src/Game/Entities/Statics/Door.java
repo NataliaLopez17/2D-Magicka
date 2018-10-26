@@ -1,9 +1,7 @@
 package Game.Entities.Statics;
 
-import Game.Entities.Creatures.NewEnemy;
 import Game.Entities.Creatures.Player;
 import Game.Entities.Statics.NiceCreamTrader;
-import Game.Items.Item;
 import Main.Handler;
 import Resources.Images;
 import Worlds.BaseWorld;
@@ -77,7 +75,6 @@ public class Door extends StaticEntity {
 			g.drawImage(Images.E,(int) x+width,(int) y+10,32,32,null);
 		}else if(ir.contains(pr) && EP){
 			g.drawImage(Images.EP,(int) x+width,(int) y+10,32,32,null);
-			g.drawImage(Images.loading,0,0,800,600,null);
 			handler.setWorld(world);
 
 		}

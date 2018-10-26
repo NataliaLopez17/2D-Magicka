@@ -1,8 +1,6 @@
 package Game.Entities.Creatures;
 
-import Worlds.BaseWorld;
 import Game.Entities.EntityBase;
-import Game.Entities.EntityManager;
 import Game.GameStates.State;
 import Game.Inventories.Inventory;
 import Game.Items.Item;
@@ -13,7 +11,6 @@ import Main.Handler;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.image.BufferedImage;
-import java.util.ArrayList;
 
 /**
  * Created by Elemental on 1/1/2017.
@@ -27,7 +24,6 @@ public class Player extends CreatureBase {
 	public Item rocky = Item.rockItem;
 	public Item money = Item.moneyBagItem;
 	public Item health2 = Item.healthpotion;
-	public Item companionItem = Item.companionItem;
 	//Animations
 	private Animation animDown, animUp, animLeft, animRight,animFireATT,animFireATTR,animFireATTU,animFireATTD;
 
