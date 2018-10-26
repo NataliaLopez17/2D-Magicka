@@ -22,7 +22,7 @@ public class NiceCreamTrader extends StaticEntity {
 	
 
 	public NiceCreamTrader(Handler handler, float x, float y) {
-		super(handler, x, y, 120, 140);
+		super(handler, x, y, 100, 120);
 		health=10000000;
 		bounds.x=0;
 		bounds.y=0;
@@ -59,6 +59,8 @@ public class NiceCreamTrader extends StaticEntity {
 		checkForPlayer(g, handler.getWorld().getEntityManager().getPlayer());
 		moneyCount = moneyCount - 1;
 		keyCount = keyCount - 1;
+		//System.out.println(moneyCount);
+		//System.out.println(keyCount);
 
 
 
@@ -74,8 +76,9 @@ public class NiceCreamTrader extends StaticEntity {
 			Font stringfont = new Font("SansSerif", Font.PLAIN, 20);
 			g.setFont(stringfont);
 			g.setColor(Color.WHITE);
-			g.drawImage(Images.L,(int)(810-handler.getGameCamera().getxOffset()),(int)(y-handler.getGameCamera().getyOffset()),30,30,null);
+			g.drawImage(Images.L,(int)(780-handler.getGameCamera().getxOffset()),(int)(y-handler.getGameCamera().getyOffset()),30,30,null);
 			g.drawImage(Images.tradeBox,(int)(920-handler.getGameCamera().getxOffset()),(int)(y-handler.getGameCamera().getyOffset()),300,100,null);
+			
 			if (ccount == 0)
 				g.drawString("0/3", (int)(1060-handler.getGameCamera().getxOffset()),(int)(75-handler.getGameCamera().getyOffset()));
 			if (ccount2 == 0)
@@ -94,6 +97,7 @@ public class NiceCreamTrader extends StaticEntity {
 					continue;
 				}
 			}
+			
 			if(handler.getKeyManager().keyJustPressed(KeyEvent.VK_L) && Item.moneyBagItem.getCount() >= 3 && Item.keyItem.getCount() >= 1) {
 				ccount = 0;
 				ccount2 = 0;
@@ -118,7 +122,7 @@ public class NiceCreamTrader extends StaticEntity {
 
 
 			else if(ir.contains(pr) && EP){
-				g.drawImage(Images.EP,(int)(810-handler.getGameCamera().getxOffset()),(int)(y-handler.getGameCamera().getyOffset()),30,30,null);
+				g.drawImage(Images.LP,(int)(780-handler.getGameCamera().getxOffset()),(int)(y-handler.getGameCamera().getyOffset()),30,30,null);
 				g.drawImage(Images.tradeBox,(int)(920-handler.getGameCamera().getxOffset()),(int)(y-handler.getGameCamera().getyOffset()),300,100,null);
 
 

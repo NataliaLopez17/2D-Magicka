@@ -17,6 +17,7 @@ public class Images {
     private static final int Fwidth = 512, Fheight = 197;
 
     public static BufferedImage[] blocks;
+    public static BufferedImage[] newWorld;
     public static BufferedImage[] player_right;
     public static BufferedImage[] player_left;
     public static BufferedImage[] player_front;
@@ -29,10 +30,10 @@ public class Images {
     public static BufferedImage[] NewEnemy_front;
     public static BufferedImage[] NewEnemy_right;
     public static BufferedImage[] NewEnemy_left;
-    public static BufferedImage[] companion_back;
-    public static BufferedImage[] companion_front;
-    public static BufferedImage[] companion_right;
     public static BufferedImage[] companion_left;
+    public static BufferedImage[] companion_right;
+    public static BufferedImage[] companion_front;
+    public static BufferedImage[] companion_back;
     
     public static BufferedImage[] butstart;
     public static BufferedImage[] particleSmoke;
@@ -63,6 +64,9 @@ public class Images {
 	public static BufferedImage keyItem;
 	public static BufferedImage niceCreamTrader;
 	public static BufferedImage tradeBox;
+	public static BufferedImage companionItem;
+	public static BufferedImage teleportCompanion;
+	public static BufferedImage summonCompanion;
 
     public Images() {
 
@@ -74,11 +78,13 @@ public class Images {
         SpriteSheet FireBallUpsheet = new SpriteSheet(Images.loadImage("/Sheets/FireBallUp.png"));
         SpriteSheet FireBallDownsheet = new SpriteSheet(Images.loadImage("/Sheets/FireBallDown.png"));
         SpriteSheet NewEnemy = new SpriteSheet(Images.loadImage("/Sheets/Undyne.png"));
-        SpriteSheet companion = new SpriteSheet(Images.loadImage("/Sheets/newCompanionSheet.png"));
-        
+        SpriteSheet companion = new SpriteSheet(Images.loadImage("/Sheets/companion.png"));
+        SpriteSheet thirdWorld = new SpriteSheet(Images.loadImage("/Sheets/thirdWorldmore.png"));
+        SpriteSheet moreThirdWorld = new SpriteSheet(Images.loadImage("/Sheets/thirdWorldmore.png"));
 
 
         blocks = new BufferedImage[15];
+        newWorld = new BufferedImage[28];
 
         player_left = new BufferedImage[4];
         player_right = new BufferedImage[4];
@@ -129,7 +135,9 @@ public class Images {
             keyItem = ImageIO.read(getClass().getResourceAsStream("/Sheets/key.png"));
             niceCreamTrader = ImageIO.read(getClass().getResourceAsStream("/Sheets/niceCreamGuy.png"));
             tradeBox = ImageIO.read(getClass().getResourceAsStream("/Sheets/undertale_box.png"));
-            
+            companionItem = ImageIO.read(getClass().getResourceAsStream("/Sheets/companionItem.png"));
+            teleportCompanion = ImageIO.read(getClass().getResourceAsStream("/Sheets/nether_star.png"));
+            summonCompanion = ImageIO.read(getClass().getResourceAsStream("/Sheets/nether_star.png"));
 
             inventory = ImageIO.read(getClass().getResourceAsStream("/Sheets/guit.png"));
             title = ImageIO.read(getClass().getResourceAsStream("/Sheets/Title.png"));
@@ -240,7 +248,38 @@ public class Images {
             blocks[12] = newsheet.crop(0,260,Bwidth,Bheight);//mossyrock
             blocks[13] = newsheet.crop(176,0,Bwidth,Bheight*2);//tree
             blocks[14] = newsheet.crop(174,410,78,74);//rock
-
+            
+            
+            //third World images
+            newWorld[0] = thirdWorld.crop(233, 0, width, height); //door
+            newWorld[1] = thirdWorld.crop(242, 61, width, height); //other door
+            newWorld[2] = thirdWorld.crop(140, 190, width, height); //upper railing
+            newWorld[3] = thirdWorld.crop(142, 207, width, height);//lower railing
+            newWorld[4] = thirdWorld.crop(140, 259, width, height); //bridge
+            newWorld[5] = thirdWorld.crop(119, 100, width, height);//stilts
+            newWorld[6] = thirdWorld.crop(160, 140, width, height);//other stilt
+            newWorld[7] = thirdWorld.crop(100, 93, width, height);//pole
+            newWorld[8] = thirdWorld.crop(140, 121, width, height);//laser
+            newWorld[9] = thirdWorld.crop(119, 0, width, height);//blue plataform
+            newWorld[10] = thirdWorld.crop(49, 0, width, height);//black plataform
+            newWorld[11] = thirdWorld.crop(100, 300, width, height);//wall
+            newWorld[12] = thirdWorld.crop(119, 300, width, height);//right corner wall
+            newWorld[13] = thirdWorld.crop(19, 300, width, height);//left corner wall
+            newWorld[14] = thirdWorld.crop(67, 192, width, height);//more floors
+            newWorld[15] = thirdWorld.crop(119, 60, width, height);//lower wall tile
+            newWorld[16] = thirdWorld.crop(120, 79, width, height);//wall panels
+            newWorld[17] = thirdWorld.crop(180, 120, width, height);//more wall panels
+            newWorld[18] = thirdWorld.crop(259, 220, width, height);//glass
+            newWorld[19] = thirdWorld.crop(280, 260, width, height);//horizontal glass
+            newWorld[20] = thirdWorld.crop(359, 19, width, height);//wall with lasers
+            newWorld[21] = thirdWorld.crop(159, 320, width, height);//white block
+            newWorld[22] = thirdWorld.crop(318, 240, width, height);//up arrow
+            newWorld[23] = thirdWorld.crop(298, 240, width, height);//left arrow
+            newWorld[24] = moreThirdWorld.crop(380, 80, width, height);//blue block
+            newWorld[25] = moreThirdWorld.crop(420, 100, width, height);//black block with blue center
+            newWorld[26] = moreThirdWorld.crop(380, 160, width, height);//red block
+            newWorld[27] = moreThirdWorld.crop(420, 180, width, height);//black block with red center
+            
 
             //player anim
             player_front[0]=newsheet.crop(132,131,width,height);
@@ -306,28 +345,25 @@ public class Images {
             NewEnemy_back[2]=NewEnemy.crop(74,2005,width + 4,height + 25);
             NewEnemy_back[3]=NewEnemy.crop(110,2005,28 + 4,height + 25);
             
-          //Companion Animation
-            companion_front[0]=companion.crop(28,20,31,35);
-            companion_front[1]=companion.crop(56,20,31,35);
-            companion_front[2]=companion.crop(84,20,31,35);
-            companion_front[3]=companion.crop(112,20,31,35);
-           
-            companion_left[0] = companion.crop(22, 71, 22, 35);
-            companion_left[1] = companion.crop(44, 71, 22, 35);
-            companion_left[2] = companion.crop(66, 71, 22, 35);
-            companion_left[3] = companion.crop(88, 71, 22, 35);
+            companion_front[0] = companion.crop(0, 20, width-3, height);
+            companion_front[1] = companion.crop(31, 20, width-3, height);
+            companion_front[2] = companion.crop(60, 20, width-3, height);
+            companion_front[3] = companion.crop(86, 20, width-3, height);
+
+            companion_left[0] = companion.crop(0, 71, width-8, height);
+            companion_left[1] = companion.crop(25, 71, width-8, height);
+            companion_left[2] = companion.crop(47, 71, width-8, height);
+            companion_left[3] = companion.crop(70, 71, width-8, height);
             
-            companion_right[0] = companion.crop(22, 122, 22, 35);
-            companion_right[1] = companion.crop(44, 122, 22, 35);
-            companion_right[2] = companion.crop(66, 122, 22, 35);
-            companion_right[3] = companion.crop(88, 122, 22, 35);
+            companion_right[0] = companion.crop(0, 122, width-8, height);
+            companion_right[1] = companion.crop(25, 122, width-8, height);
+            companion_right[2] = companion.crop(47, 122, width-8, height);
+            companion_right[3] = companion.crop(70, 122, width-8, height);
             
-            
-            companion_back[0]=companion.crop(28,173,31,35);
-            companion_back[1]=companion.crop(56,173,31,35);
-            companion_back[2]=companion.crop(84,173,31,35);
-            companion_back[3]=companion.crop(112,173,31,35);
-            
+            companion_back[0] = companion.crop(0, 173, width-3, height);
+            companion_back[1] = companion.crop(31, 173, width-3, height);
+            companion_back[2] = companion.crop(60, 173, width-3, height);
+            companion_back[3] = companion.crop(86, 173, width-3, height );
 
         } catch (IOException e) {
             e.printStackTrace();

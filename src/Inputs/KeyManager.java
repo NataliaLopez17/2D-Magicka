@@ -11,6 +11,7 @@ public class KeyManager implements KeyListener {
 	public boolean fattbut=false;
 	public boolean pbutt=false;
 	public boolean skip=false, regen=false, give=false;
+	public boolean summon = false;
 
 
 	public KeyManager(){
@@ -47,6 +48,7 @@ public class KeyManager implements KeyListener {
 		skip = keys[KeyEvent.VK_TAB];
 		regen = keys[KeyEvent.VK_SHIFT];
 		give = keys[KeyEvent.VK_X];
+		summon = keys[KeyEvent.VK_G];
 
 	}
 

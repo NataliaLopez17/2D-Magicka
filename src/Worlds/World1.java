@@ -1,11 +1,13 @@
 package Worlds;
 
-import Game.Entities.Creatures.NewEnemy;
 //import Game.Entities.Creatures.PapyrusTrader;
 import Game.Entities.Creatures.Player;
 import Game.Entities.Creatures.SkelyEnemy;
-import Game.Entities.Creatures.companion;
-import Game.Entities.Statics.*;
+import Game.Entities.Statics.Door;
+import Game.Entities.Statics.Laptop;
+import Game.Entities.Statics.NiceCreamTrader;
+import Game.Entities.Statics.Rock;
+import Game.Entities.Statics.Tree;
 import Main.Handler;
 
 /**
@@ -13,7 +15,6 @@ import Main.Handler;
  */
 public class World1 extends BaseWorld{
 
-    private Handler handler;
     public static BaseWorld caveWorld;
 
     public World1(Handler handler, String path, Player player){
@@ -40,7 +41,6 @@ public class World1 extends BaseWorld{
         entityManager.addEntity(new Laptop(handler, 1500, 1370));
         entityManager.addEntity(new Laptop(handler, 730, 600));
         entityManager.addEntity(new NiceCreamTrader(handler, 800, 20));
-        entityManager.addEntity(new companion(handler, 1360, 500));
 
         entityManager.getPlayer().setX(spawnX);
         entityManager.getPlayer().setY(spawnY);

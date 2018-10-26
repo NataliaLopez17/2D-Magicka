@@ -18,7 +18,7 @@ public class NewEnemy extends CreatureBase  {
 
 	private Animation animDown, animUp, animLeft, animRight;
 
-	private Boolean attacking=false;
+//	private Boolean attacking=false;
 
 	private int animWalkingSpeed = 100;
 	private Inventory Newinventory;
@@ -31,12 +31,12 @@ public class NewEnemy extends CreatureBase  {
 	private int direction;
 
 	public NewEnemy(Handler handler, float x, float y) {
-		super(handler, x, y, 120, 70);
+		super(handler, x, y,120, 70);
 		bounds.x=8*2;
 		bounds.y=18*2;
 		bounds.width=16*2;
 		bounds.height=14*2;
-		speed=2.3f;
+		speed=1.5f;
 		health=50;
 
 		NewCam= new Rectangle();
@@ -181,7 +181,7 @@ public class NewEnemy extends CreatureBase  {
 		g.drawImage(getCurrentAnimationFrame(animDown,animUp,animLeft,animRight,Images.NewEnemy_front,Images.NewEnemy_back,Images.NewEnemy_left,Images.NewEnemy_right), (int) (x - handler.getGameCamera().getxOffset()), (int) (y - handler.getGameCamera().getyOffset()), width, height, null);
 		if(isBeinghurt() && healthcounter<=120){
 			g.setColor(Color.white);
-			g.drawString("SkelyHealth: " + getHealth(),(int) (x-handler.getGameCamera().getxOffset()),(int) (y-handler.getGameCamera().getyOffset()-20));
+			g.drawString("Undyne Health: " + getHealth(),(int) (x-handler.getGameCamera().getxOffset()),(int) (y-handler.getGameCamera().getyOffset()-20));
 		}
 	}
 
@@ -190,7 +190,7 @@ public class NewEnemy extends CreatureBase  {
 
 	@Override
 	public void die() {
-		handler.getWorld().getItemManager().addItem(Item.keyItem.createNew((int)x + bounds.x,(int)y + bounds.y,1));
+		handler.getWorld().getItemManager().addItem(Item.companionItem.createNew((int)x + bounds.x,(int)y + bounds.y,1));
 
 
 	}

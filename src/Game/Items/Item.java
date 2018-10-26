@@ -33,6 +33,7 @@ public class Item {
     public static Item moneyBagItem = new Item(Images.moneyBag,"Money Bag",3);
     public static Item healthpotion = new Item(Images.healthpotion, "health potion",4);
     public static Item keyItem = new Item(Images.keyItem, "KeyItem",5);
+    public static Item companionItem = new Item(Images.companionItem, "CompanionItem", 6);
 
     //class
 

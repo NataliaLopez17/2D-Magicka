@@ -16,6 +16,16 @@
 	</natures>
 	<linkedResources>
 		<link>
+			<name>res/Maps/third World map.map</name>
+			<type>1</type>
+			<location>C:/Users/NATALIA E/Desktop/Magika/third World map.map</location>
+		</link>
+		<link>
+			<name>res/Sheets/companion.png</name>
+			<type>1</type>
+			<location>C:/Users/NATALIA E/Desktop/Magika/companion.png</location>
+		</link>
+		<link>
 			<name>res/Sheets/companionItem.png</name>
 			<type>1</type>
 			<location>C:/Users/NATALIA E/Desktop/Magika/companionItem.png</location>
@@ -31,14 +41,19 @@
 			<location>C:/Users/NATALIA E/Desktop/Magika/moneyBag.png</location>
 		</link>
 		<link>
-			<name>res/Sheets/newCompanionSheet.png</name>
+			<name>res/Sheets/nether_star.png</name>
 			<type>1</type>
-			<location>C:/Users/NATALIA E/Desktop/Magika/newCompanionSheet.png</location>
+			<location>C:/Users/NATALIA E/Desktop/Magika/nether_star.png</location>
 		</link>
 		<link>
 			<name>res/Sheets/newObject.png</name>
 			<type>1</type>
 			<location>C:/Users/NATALIA E/Desktop/Magika/newObject.png</location>
+		</link>
+		<link>
+			<name>res/Sheets/thirdWorldmore.png</name>
+			<type>1</type>
+			<location>C:/Users/NATALIA E/Desktop/Magika/thirdWorldmore.png</location>
 		</link>
 		<link>
 			<name>res/Sheets/undertale_box.png</name>

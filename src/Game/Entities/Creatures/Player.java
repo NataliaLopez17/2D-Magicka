@@ -2,6 +2,7 @@ package Game.Entities.Creatures;
 
 import Worlds.BaseWorld;
 import Game.Entities.EntityBase;
+import Game.Entities.EntityManager;
 import Game.GameStates.State;
 import Game.Inventories.Inventory;
 import Game.Items.Item;
@@ -27,6 +28,7 @@ public class Player extends CreatureBase {
 	public Item rocky = Item.rockItem;
 	public Item money = Item.moneyBagItem;
 	public Item health2 = Item.healthpotion;
+	public Item companionItem = Item.companionItem;
 	private ArrayList<Item> inventoryItems;
 
 
@@ -92,6 +94,7 @@ public class Player extends CreatureBase {
 				handler.getWorld().getEntityManager().getPlayer().setHealth(75);
 				i.setCount(i.getCount() - 1);
 			}
+			
 			else {
 				continue;
 			}
