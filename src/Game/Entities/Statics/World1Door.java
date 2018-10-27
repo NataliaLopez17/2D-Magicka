@@ -12,14 +12,14 @@ import java.awt.*;
  * Created by Elemental on 2/2/2017.
  */
 
-public class Door extends StaticEntity {
+public class World1Door extends StaticEntity {
 
 	private Rectangle ir = new Rectangle();
 	public Boolean EP = false;
 
 	private BaseWorld world;
 
-	public Door(Handler handler, float x, float y,BaseWorld world) {
+	public World1Door(Handler handler, float x, float y,BaseWorld world) {
 		super(handler, 120, y, 140, 100);
 		this.world=world;
 		health=10000000;

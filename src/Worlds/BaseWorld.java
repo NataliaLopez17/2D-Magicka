@@ -18,6 +18,9 @@ import Resources.Utils;
  */
 public class BaseWorld {
 
+	public static BaseWorld theCoreWorld;
+	public static BaseWorld world1;
+	
 	protected Handler handler;
 	protected int width, height;
 	protected int spawnX, spawnY;

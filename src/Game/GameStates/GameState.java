@@ -3,6 +3,7 @@ package Game.GameStates;
 import Game.Entities.Creatures.Player;
 import Main.Handler;
 import Worlds.BaseWorld;
+import Worlds.CaveWorld;
 import Worlds.World1;
 
 import java.awt.*;
@@ -27,6 +28,7 @@ public class GameState extends State {
         if(handler.getKeyManager().skip) {
         	handler.setWorld(World1.caveWorld);
         }
+        handler.setWorld(CaveWorld.theCoreWorld);
 
     }
 

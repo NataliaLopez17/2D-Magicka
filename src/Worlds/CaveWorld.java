@@ -1,7 +1,7 @@
 package Worlds;
-import Game.Entities.Creatures.NewEnemy;
 import Game.Entities.Creatures.Player;
-import Game.Entities.Statics.Door;
+import Game.Entities.Creatures.UndyneEnemy;
+import Game.Entities.Statics.CaveWorldDoor;
 import Main.Handler;
 
 /**
@@ -9,15 +9,15 @@ import Main.Handler;
  */
 public class CaveWorld extends BaseWorld{
 	
-    private BaseWorld theCoreWorld;
+    public static BaseWorld theCoreWorld;
 
     public CaveWorld(Handler handler, String path, Player player) {
         super(handler,path,player);
         
-        theCoreWorld = new TheCoreWorld(handler,"res/Maps/caveMap.map",player);
+        theCoreWorld = new TheCoreWorld(handler,"res/Maps/map1.map",player);
         
-        entityManager.addEntity(new Door(handler, 100, 0, theCoreWorld));
-        entityManager.addEntity(new NewEnemy(handler, 1200, 400));
+        entityManager.addEntity(new CaveWorldDoor(handler, 100, 0, theCoreWorld));
+        entityManager.addEntity(new UndyneEnemy(handler, 1200, 400));
        
 
     }

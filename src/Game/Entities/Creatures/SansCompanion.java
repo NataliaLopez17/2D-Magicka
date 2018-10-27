@@ -21,7 +21,7 @@ public class SansCompanion extends CreatureBase  {
 
 //    private Boolean attacking=false;
 
-    private int animWalkingSpeed = 150;
+    private int animWalkingSpeed = 100;
     private Inventory Companioninventory;
     private Rectangle CompanionCam;
 
@@ -37,7 +37,7 @@ public class SansCompanion extends CreatureBase  {
         bounds.y=18*2;
         bounds.width=16*2;
         bounds.height=14*2;
-        speed=2.5f;
+        speed=1.5f;
         health=100;
 
         CompanionCam= new Rectangle();

@@ -13,7 +13,7 @@ import java.util.Random;
 /**
  * Created by Elemental on 2/7/2017.
  */
-public class NewEnemy extends CreatureBase  {
+public class UndyneEnemy extends CreatureBase  {
 
 
 	private Animation animDown, animUp, animLeft, animRight;
@@ -32,7 +32,7 @@ public class NewEnemy extends CreatureBase  {
 	
 	public static int count = 0;
 
-	public NewEnemy(Handler handler, float x, float y) {
+	public UndyneEnemy(Handler handler, float x, float y) {
 		super(handler, x, y,120, 70);
 		bounds.x=25;
 		bounds.y=42;
@@ -193,6 +193,7 @@ public class NewEnemy extends CreatureBase  {
 	@Override
 	public void die() {
 		handler.getWorld().getItemManager().addItem(Item.companionItem.createNew((int)x + bounds.x,(int)y + bounds.y,1));
+		count++;
 
 
 	}

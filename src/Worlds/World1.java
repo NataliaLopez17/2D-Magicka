@@ -2,7 +2,7 @@ package Worlds;
 
 import Game.Entities.Creatures.Player;
 import Game.Entities.Creatures.SkelyEnemy;
-import Game.Entities.Statics.Door;
+import Game.Entities.Statics.World1Door;
 import Game.Entities.Statics.Laptop;
 import Game.Entities.Statics.NiceCreamTrader;
 import Game.Entities.Statics.Rock;
@@ -31,8 +31,7 @@ public class World1 extends BaseWorld{
         entityManager.addEntity(new Rock(handler, 88, 1345));
         entityManager.addEntity(new Tree(handler, 77, 700));
         entityManager.addEntity(new Rock(handler, 700, 83));
-        entityManager.addEntity(new Door(handler, 100, 0,caveWorld));
-//        entityManager.addEntity(new Door(handler, 100, 0,theCoreWorld));
+        entityManager.addEntity(new World1Door(handler, 100, 0,caveWorld));
         entityManager.addEntity(new SkelyEnemy(handler, 1250, 500));
         entityManager.addEntity(new Laptop(handler, 270, 270));
         entityManager.addEntity(new Laptop(handler, 900, 380));
