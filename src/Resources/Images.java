@@ -22,6 +22,10 @@ public class Images {
     public static BufferedImage[] player_left;
     public static BufferedImage[] player_front;
     public static BufferedImage[] player_back;
+    public static BufferedImage[] mettaton_front;
+    public static BufferedImage[] mettaton_back;
+    public static BufferedImage[] mettaton_left;
+    public static BufferedImage[] mettaton_right;
     public static BufferedImage[] SkelyEnemy_right;
     public static BufferedImage[] SkelyEnemy_left;
     public static BufferedImage[] SkelyEnemy_front;
@@ -79,6 +83,7 @@ public class Images {
         SpriteSheet Sans = new SpriteSheet(Images.loadImage("/Sheets/companion.png"));
         SpriteSheet thirdWorld = new SpriteSheet(Images.loadImage("/Sheets/thirdWorldmore.png"));
         SpriteSheet moreThirdWorld = new SpriteSheet(Images.loadImage("/Sheets/thirdWorldmore.png"));
+        SpriteSheet MettatonEx = new SpriteSheet(Images.loadImage("/Sheets/mettatonEx.png"));
 
 
         blocks = new BufferedImage[15];
@@ -89,7 +94,11 @@ public class Images {
         player_front = new BufferedImage[4];
         player_back = new BufferedImage[4];
         
-
+        mettaton_left = new BufferedImage[4];
+        mettaton_right = new BufferedImage[4];
+        mettaton_front = new BufferedImage[4];
+        mettaton_back = new BufferedImage[4];
+        
         SkelyEnemy_left = new BufferedImage[4];
         SkelyEnemy_right = new BufferedImage[4];
         SkelyEnemy_front = new BufferedImage[4];
@@ -341,6 +350,7 @@ public class Images {
             NewEnemy_back[2]=NewEnemy.crop(74,2005,width + 4,height + 25);
             NewEnemy_back[3]=NewEnemy.crop(110,2005,28 + 4,height + 25);
             
+            //companion animation
             companion_front[0] = Sans.crop(0, 20, width-3, height);
             companion_front[1] = Sans.crop(31, 20, width-3, height);
             companion_front[2] = Sans.crop(60, 20, width-3, height);
@@ -360,8 +370,31 @@ public class Images {
             companion_back[1] = Sans.crop(31, 173, width-3, height);
             companion_back[2] = Sans.crop(60, 173, width-3, height);
             companion_back[3] = Sans.crop(86, 173, width-3, height );
-
-        } catch (IOException e) {
+            
+            //final boss animation
+            mettaton_front[0] = MettatonEx.crop(30, 75, 44, 53);
+            mettaton_front[1] = MettatonEx.crop(75, 75, 44, 53);
+            mettaton_front[2] = MettatonEx.crop(165, 85, 44, 53);
+            mettaton_front[3] = MettatonEx.crop(218, 70, 44, 53);
+            
+            mettaton_left[0] = MettatonEx.crop(299, 0, 24, 53);
+            mettaton_left[1] = MettatonEx.crop(321, 0, 24, 53);
+            mettaton_left[2] = MettatonEx.crop(346, 0, 24, 53);
+            mettaton_left[3] = MettatonEx.crop(369, 0, 24, 53);
+            
+            mettaton_right[0] = MettatonEx.crop(396, 0, 25, 53);
+            mettaton_right[1] = MettatonEx.crop(420, 0, 25, 53);
+            mettaton_right[2] = MettatonEx.crop(443, 0, 25, 53);
+            mettaton_right[3] = MettatonEx.crop(71, 2, 25, 53);
+            
+            mettaton_back[0] = MettatonEx.crop(149, 0, 38, 53);
+            mettaton_back[1] = MettatonEx.crop(189, 0, 38, 53);
+            mettaton_back[2] = MettatonEx.crop(223, 0, 38, 53);
+            mettaton_back[3] = MettatonEx.crop(263, 0, 38, 53);
+            
+           
+        } 
+        catch (IOException e) {
             e.printStackTrace();
         }
 

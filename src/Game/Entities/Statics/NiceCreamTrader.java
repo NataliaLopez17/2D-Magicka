@@ -114,8 +114,11 @@ public class NiceCreamTrader extends StaticEntity {
 						ccount = 0;
 						ccount2 = 0;
 						COUNTER = 1;
+						Item.keyItem.setCount(Item.keyItem.getCount() - 1); //remember to remove item from inventory?
+						Item.keyItem.setCount(0);
 						Item.moneyBagItem.setCount(Item.moneyBagItem.getCount() - 3);
-						Item.keyItem.setCount(0); //remember to remove item from inventory?
+						Item.moneyBagItem.setCount(0);
+						
 						break;
 
 					}

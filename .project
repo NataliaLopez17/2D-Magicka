@@ -36,6 +36,11 @@
 			<location>C:/Users/NATALIA E/Desktop/Magika/healthpotion.png</location>
 		</link>
 		<link>
+			<name>res/Sheets/mettatonEx.png</name>
+			<type>1</type>
+			<location>C:/Users/NATALIA E/Desktop/Magika/mettatonEx.png</location>
+		</link>
+		<link>
 			<name>res/Sheets/moneyBag.png</name>
 			<type>1</type>
 			<location>C:/Users/NATALIA E/Desktop/Magika/moneyBag.png</location>
@@ -44,6 +49,11 @@
 			<name>res/Sheets/newObject.png</name>
 			<type>1</type>
 			<location>C:/Users/NATALIA E/Desktop/Magika/newObject.png</location>
+		</link>
+		<link>
+			<name>res/Sheets/thirdWorld.png</name>
+			<type>1</type>
+			<location>C:/Users/NATALIA E/Desktop/Magika/thirdWorld.png</location>
 		</link>
 		<link>
 			<name>res/Sheets/thirdWorldmore.png</name>
