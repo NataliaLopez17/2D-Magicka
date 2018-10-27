@@ -16,54 +16,34 @@
 	</natures>
 	<linkedResources>
 		<link>
-			<name>res/Maps/thirdWorldMap.map</name>
+			<name>companion.png</name>
 			<type>1</type>
-			<location>C:/Users/NATALIA E/Desktop/Magika/thirdWorldMap.map</location>
-		</link>
-		<link>
-			<name>res/Sheets/companion.png</name>
-			<type>1</type>
-			<location>C:/Users/NATALIA E/Desktop/Magika/companion.png</location>
+			<location>C:/Users/Giovanni/Desktop/mroe shit/shit/companion.png</location>
 		</link>
 		<link>
 			<name>res/Sheets/companionItem.png</name>
 			<type>1</type>
-			<location>C:/Users/NATALIA E/Desktop/Magika/companionItem.png</location>
+			<location>C:/Users/Giovanni/Desktop/mroe shit/shit/Magika/companionItem.png</location>
 		</link>
 		<link>
 			<name>res/Sheets/healthpotion.png</name>
 			<type>1</type>
-			<location>C:/Users/NATALIA E/Desktop/Magika/healthpotion.png</location>
-		</link>
-		<link>
-			<name>res/Sheets/mettatonEx.png</name>
-			<type>1</type>
-			<location>C:/Users/NATALIA E/Desktop/Magika/mettatonEx.png</location>
+			<location>C:/Users/Giovanni/Desktop/mroe shit/shit/Magika/healthpotion.png</location>
 		</link>
 		<link>
 			<name>res/Sheets/moneyBag.png</name>
 			<type>1</type>
-			<location>C:/Users/NATALIA E/Desktop/Magika/moneyBag.png</location>
+			<location>C:/Users/Giovanni/Desktop/mroe shit/shit/Magika/moneyBag.png</location>
 		</link>
 		<link>
 			<name>res/Sheets/newObject.png</name>
 			<type>1</type>
-			<location>C:/Users/NATALIA E/Desktop/Magika/newObject.png</location>
-		</link>
-		<link>
-			<name>res/Sheets/thirdWorld.png</name>
-			<type>1</type>
-			<location>C:/Users/NATALIA E/Desktop/Magika/thirdWorld.png</location>
-		</link>
-		<link>
-			<name>res/Sheets/thirdWorldmore.png</name>
-			<type>1</type>
-			<location>C:/Users/NATALIA E/Desktop/Magika/thirdWorldmore.png</location>
+			<location>C:/Users/Giovanni/Desktop/mroe shit/shit/Magika/newObject.png</location>
 		</link>
 		<link>
 			<name>res/Sheets/undertale_box.png</name>
 			<type>1</type>
-			<location>C:/Users/NATALIA E/Desktop/Magika/undertale_box.png</location>
+			<location>C:/Users/Giovanni/Desktop/mroe shit/shit/Magika/undertale_box.png</location>
 		</link>
 	</linkedResources>
 </projectDescription>

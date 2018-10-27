@@ -6,6 +6,7 @@ import java.awt.event.KeyEvent;
 import Game.Entities.EntityManager;
 import Game.Entities.Creatures.Player;
 import Game.Entities.Creatures.SansCompanion;
+import Game.Entities.Statics.CaveWorldDoor;
 import Game.GameStates.State;
 import Game.Items.Item;
 import Game.Items.ItemManager;
@@ -20,14 +21,13 @@ public class BaseWorld {
 
 	public static BaseWorld theCoreWorld;
 	public static BaseWorld world1;
-	
+	public boolean oof;
+
 	protected Handler handler;
 	protected int width, height;
 	protected int spawnX, spawnY;
 	protected int[][] tiles;
 	protected int countP = 0;
-	
-	protected int stopFollowingMeSans = 0;
 
 	protected EntityManager entityManager;
 
@@ -48,17 +48,26 @@ public class BaseWorld {
 	}
 
 	public void tick(){
-		if(handler.getKeyManager().keyJustPressed(KeyEvent.VK_G) && Item.companionItem.getCount() >= 1) {
+		if (TheCoreWorld.stopFollowingMeSans >= 1 && CaveWorldDoor.hello == true) {
 			entityManager.addEntity(new SansCompanion(handler, handler.getWorld().getEntityManager().getPlayer().getX(), handler.getWorld().getEntityManager().getPlayer().getY() - 25));
-			Item.companionItem.setCount(0);
+			CaveWorldDoor.hello = false; }
+		for (Item ii : handler.getWorld().getEntityManager().getPlayer().getInventory().getInventoryItems()) {
+			if (ii.getName() == "CompanionItem") {
+				oof = true;
+			}
+
+		}
+		if(handler.getKeyManager().keyJustPressed(KeyEvent.VK_G) && oof == true) {
+			TheCoreWorld.stopFollowingMeSans++;
+			entityManager.addEntity(new SansCompanion(handler, handler.getWorld().getEntityManager().getPlayer().getX(), handler.getWorld().getEntityManager().getPlayer().getY() - 25));
 			for (Item j : handler.getWorld().getEntityManager().getPlayer().getInventory().getInventoryItems()) {
 				if (j.getName() == "CompanionItem") {
 					j.setCount(j.getCount() - 1);
-					stopFollowingMeSans++;
+
 				}
 			}
 		}
-		
+
 		entityManager.tick();
 		itemManager.tick();
 		countP++;

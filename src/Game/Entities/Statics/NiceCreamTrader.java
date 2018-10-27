@@ -20,8 +20,8 @@ public class NiceCreamTrader extends StaticEntity {
 	public int ccount2 = 0;
 	public static int COUNTER;
 
-	public int ex = 0;
-	public int way = 0;
+	public boolean ex;
+	public boolean way;
 
 
 	public NiceCreamTrader(Handler handler, float x, float y) {
@@ -60,8 +60,8 @@ public class NiceCreamTrader extends StaticEntity {
 	public void render(Graphics g) {
 		g.drawImage(Images.niceCreamTrader,(int)(x-handler.getGameCamera().getxOffset()),(int)(y-handler.getGameCamera().getyOffset()),width,height,null);
 		checkForPlayer(g, handler.getWorld().getEntityManager().getPlayer());
-		moneyCount = moneyCount - 1;
-		keyCount = keyCount - 1;
+		//moneyCount = moneyCount - 1;
+		//keyCount = keyCount - 1;
 	}
 
 	private void checkForPlayer(Graphics g, Player p) {
@@ -100,28 +100,23 @@ public class NiceCreamTrader extends StaticEntity {
 			if(handler.getKeyManager().keyJustPressed(KeyEvent.VK_L)) {
 
 				for (Item j : handler.getWorld().getEntityManager().getPlayer().getInventory().getInventoryItems()) {
-
-					if (j.getName() == "Money Bag") {
-						if (j.getCount() >= 3)
-							ex = 1;
-
-					}
 					if (j.getName() == "KeyItem") {
-						if (j.getCount() >= 1)
-							way = 1;
-					}
-					if( ex == 1 && way == 1) {
-						ccount = 0;
+						way = true;
+						j.setCount(j.getCount() - 1);
 						ccount2 = 0;
-						COUNTER = 1;
-						Item.keyItem.setCount(Item.keyItem.getCount() - 1); //remember to remove item from inventory?
-						Item.keyItem.setCount(0);
-						Item.moneyBagItem.setCount(Item.moneyBagItem.getCount() - 3);
-						Item.moneyBagItem.setCount(0);
-						
-						break;
-
 					}
+					if (j.getName() == "Money Bag") {
+						if (j.getCount() >= 3) {
+							ex = true;
+							j.setCount(j.getCount() - 3);
+							ccount = 0;
+						}
+					}
+						
+				}
+
+				if (ex == true && way == true) {
+					COUNTER = 1;
 				}
 			}
 
@@ -156,4 +151,5 @@ public class NiceCreamTrader extends StaticEntity {
 
 	}
 }
+
 

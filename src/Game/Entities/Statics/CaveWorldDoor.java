@@ -9,6 +9,7 @@ import Game.Entities.Creatures.UndyneEnemy;
 import Main.Handler;
 import Resources.Images;
 import Worlds.BaseWorld;
+import Worlds.TheCoreWorld;
 
 /**
  * Created by Elemental on 2/2/2017.
@@ -18,6 +19,7 @@ public class CaveWorldDoor extends StaticEntity {
 
 	private Rectangle ir = new Rectangle();
 	public Boolean EP = false;
+	public static boolean hello;
 
 	private BaseWorld world;
 
@@ -47,6 +49,7 @@ public class CaveWorldDoor extends StaticEntity {
 
 		if(handler.getKeyManager().attbut){
 			EP=true;
+			
 
 		}else if(!handler.getKeyManager().attbut){
 			EP=false;
@@ -72,6 +75,8 @@ public class CaveWorldDoor extends StaticEntity {
 		}else if(ir.contains(pr) && EP){
 			g.drawImage(Images.EP,(int) x+width,(int) y+10,32,32,null);
 			handler.setWorld(world);
+			hello = true;
+			
 
 		}
 

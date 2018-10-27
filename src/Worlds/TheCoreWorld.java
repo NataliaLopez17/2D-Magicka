@@ -10,6 +10,7 @@ import Main.Handler;
 public class TheCoreWorld extends BaseWorld{
     private Handler handler;
     private Player player;
+    public static int stopFollowingMeSans;
 
     public TheCoreWorld(Handler handler, String path, Player player) {
         super(handler,path,player);
@@ -17,9 +18,9 @@ public class TheCoreWorld extends BaseWorld{
         this.player=player;
 
         entityManager.addEntity(new UndyneEnemy(handler, 1200, 400));
-        entityManager.addEntity(new SansCompanion(handler, 100, 30));
+        
+        	
 
     }
-
 
 }
