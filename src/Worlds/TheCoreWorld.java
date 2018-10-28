@@ -1,6 +1,8 @@
 package Worlds;
 import Game.Entities.Creatures.MettatonEx;
 import Game.Entities.Creatures.Player;
+import Game.Entities.Statics.Laptop;
+import Game.Entities.Statics.NetherStar;
 import Main.Handler;
 
 /**
@@ -17,9 +19,17 @@ public class TheCoreWorld extends BaseWorld{
         this.player=player;
 
         entityManager.addEntity(new MettatonEx(handler, 1200, 400));
+        entityManager.addEntity(new NetherStar(handler, 1200, 400));
+        entityManager.addEntity(new NetherStar(handler, 1200, 400));
+        entityManager.addEntity(new NetherStar(handler, 1200, 400));
+        entityManager.addEntity(new NetherStar(handler, 1200, 400));
+        entityManager.addEntity(new NetherStar(handler, 1200, 400));
+        entityManager.addEntity(new NetherStar(handler, 1200, 400));
+        entityManager.addEntity(new NetherStar(handler, 1200, 400));
+       
         
-        entityManager.getPlayer().setX(spawnX);
-        entityManager.getPlayer().setY(spawnY);	
+        entityManager.getPlayer().setX(100);
+        entityManager.getPlayer().setY(1300);	
     }
 
 }

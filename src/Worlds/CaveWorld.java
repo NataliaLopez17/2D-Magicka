@@ -1,8 +1,8 @@
 package Worlds;
-import Game.Entities.Creatures.MettatonEx;
 import Game.Entities.Creatures.Player;
 import Game.Entities.Creatures.UndyneEnemy;
 import Game.Entities.Statics.CaveWorldDoor;
+import Game.Entities.Statics.Laptop;
 import Main.Handler;
 
 /**
@@ -19,9 +19,15 @@ public class CaveWorld extends BaseWorld{
         
         entityManager.addEntity(new CaveWorldDoor(handler, 100, 0, theCoreWorld));
         entityManager.addEntity(new UndyneEnemy(handler, 1200, 400));
-        entityManager.addEntity(new MettatonEx(handler, 400, 800));
+        entityManager.addEntity(new Laptop(handler, 1200, 400));
+        entityManager.addEntity(new Laptop(handler, 550, 500));
+        entityManager.addEntity(new Laptop(handler, 800, 100));
+        entityManager.addEntity(new Laptop(handler, 30, 50));
+        entityManager.addEntity(new Laptop(handler, 100, 300));
+        entityManager.addEntity(new Laptop(handler, 1000, 1000));
        
-
+        entityManager.getPlayer().setX(800);
+        entityManager.getPlayer().setY(20);	
     }
 
 

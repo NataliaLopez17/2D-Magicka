@@ -21,6 +21,11 @@
 			<location>C:/Users/Giovanni/Desktop/mroe shit/shit/companion.png</location>
 		</link>
 		<link>
+			<name>res/Blocks/pack.png</name>
+			<type>1</type>
+			<location>C:/Users/NATALIA E/Desktop/Magika/pack.png</location>
+		</link>
+		<link>
 			<name>res/Sheets/companionItem.png</name>
 			<type>1</type>
 			<location>C:/Users/NATALIA E/Desktop/Magika/companionItem.png</location>
@@ -36,9 +41,29 @@
 			<location>C:/Users/NATALIA E/Desktop/Magika/moneyBag.png</location>
 		</link>
 		<link>
+			<name>res/Sheets/nether_star.png</name>
+			<type>1</type>
+			<location>C:/Users/NATALIA E/Desktop/Magika/nether_star.png</location>
+		</link>
+		<link>
 			<name>res/Sheets/newObject.png</name>
 			<type>1</type>
 			<location>C:/Users/NATALIA E/Desktop/Magika/newObject.png</location>
+		</link>
+		<link>
+			<name>res/Sheets/thirdWorld.png</name>
+			<type>1</type>
+			<location>C:/Users/NATALIA E/Desktop/Magika/thirdWorld.png</location>
+		</link>
+		<link>
+			<name>res/Sheets/thirdWorldmore.png</name>
+			<type>1</type>
+			<location>C:/Users/NATALIA E/Desktop/Magika/thirdWorldmore.png</location>
+		</link>
+		<link>
+			<name>res/music/OHjp_EESacg.wav</name>
+			<type>1</type>
+			<location>C:/Users/NATALIA E/Desktop/Magika/OHjp_EESacg.wav</location>
 		</link>
 	</linkedResources>
 </projectDescription>

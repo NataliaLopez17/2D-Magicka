@@ -74,10 +74,10 @@ public class CaveWorldDoor extends StaticEntity {
 			g.drawImage(Images.E,(int) x+width,(int) y+10,32,32,null);
 		}else if(ir.contains(pr) && EP){
 			g.drawImage(Images.EP,(int) x+width,(int) y+10,32,32,null);
+			handler.getWorld().getEntityManager().getPlayer().setX(60);
+			handler.getWorld().getEntityManager().getPlayer().setX(1200);
 			handler.setWorld(world);
 			hello = true;
-			
-
 		}
 
 

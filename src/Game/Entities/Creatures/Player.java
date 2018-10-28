@@ -7,6 +7,9 @@ import Game.Items.Item;
 import Game.SpellCast.SpellCastUI;
 import Resources.Animation;
 import Resources.Images;
+import Worlds.BaseWorld;
+import Worlds.CaveWorld;
+import Worlds.World1;
 import Main.Handler;
 import java.awt.*;
 import java.awt.event.KeyEvent;
@@ -18,6 +21,10 @@ import java.awt.image.BufferedImage;
 
 public class Player extends CreatureBase {
 
+	public static boolean world1 = true;
+	public static BaseWorld caveWorld = World1.caveWorld;
+	public static BaseWorld theCoreWorld = CaveWorld.theCoreWorld;
+	
 	public Item[] itemslist = Item.items;
 	public Item hwhood = Item.woodItem;
 	public Item firee = Item.fireRuneItem;
@@ -187,8 +194,20 @@ public class Player extends CreatureBase {
 		g.setColor(Color.white);
 		g.drawString("Health: " + getHealth(),(int)(x-handler.getGameCamera().getxOffset()),(int)(y-handler.getGameCamera().getyOffset()-10));
 
-
-
+	}
+	
+	public void spawnSomewhere() {
+		if(world1) {
+			handler.getWorld().getEntityManager().getPlayer().setX(100);
+			handler.getWorld().getEntityManager().getPlayer().setX(100);
+			handler.setWorld(caveWorld);
+			world1 = false;
+		}
+		else {
+			handler.getWorld().getEntityManager().getPlayer().setX(60);
+			handler.getWorld().getEntityManager().getPlayer().setX(1200);
+			handler.setWorld(theCoreWorld);
+		}
 	}
 
 	public void readyFireAttack(){

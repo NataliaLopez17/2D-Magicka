@@ -69,6 +69,7 @@ public class Images {
 	public static BufferedImage niceCreamTrader;
 	public static BufferedImage tradeBox;
 	public static BufferedImage companionItem;
+	public static BufferedImage netherStar;
 
     public Images() {
 
@@ -84,10 +85,11 @@ public class Images {
         SpriteSheet thirdWorld = new SpriteSheet(Images.loadImage("/Sheets/thirdWorld.png"));
         SpriteSheet moreThirdWorld = new SpriteSheet(Images.loadImage("/Sheets/thirdWorldmore.png"));
         SpriteSheet MettatonEx = new SpriteSheet(Images.loadImage("/Sheets/MettatonEx.png"));
+        SpriteSheet netherStar = new SpriteSheet(Images.loadImage("/Sheets/nether_star.png"));
 
 
-        blocks = new BufferedImage[15];
-        newWorld = new BufferedImage[28];
+        blocks = new BufferedImage[16];
+        newWorld = new BufferedImage[29];
 
         player_left = new BufferedImage[4];
         player_right = new BufferedImage[4];
@@ -253,37 +255,24 @@ public class Images {
             blocks[12] = newsheet.crop(0,260,Bwidth,Bheight);//mossyrock
             blocks[13] = newsheet.crop(176,0,Bwidth,Bheight*2);//tree
             blocks[14] = newsheet.crop(174,410,78,74);//rock
+            blocks[15] = ImageIO.read(getClass().getResourceAsStream("/Blocks/pack.png"));
             
             
             //third World images
-            newWorld[0] = thirdWorld.crop(233, 0, width, height); //NOT USED door
-            newWorld[1] = thirdWorld.crop(242, 61, width, height); //other door
-            newWorld[2] = thirdWorld.crop(140, 190, width, height); //upper railing
-            newWorld[3] = thirdWorld.crop(142, 207, width, height);// NOT USED lower railing
-            newWorld[4] = thirdWorld.crop(140, 259, width, height); //bridge
-            newWorld[5] = thirdWorld.crop(119, 100, width, height);// NOT USED stilts
-            newWorld[6] = thirdWorld.crop(160, 140, width, height);//other stilt
-            newWorld[7] = thirdWorld.crop(100, 93, width, height);// NOT USED pole
-            newWorld[8] = thirdWorld.crop(140, 121, width, height);//laser
-            newWorld[9] = thirdWorld.crop(119, 0, width, height);//blue plataform
-            newWorld[10] = thirdWorld.crop(49, 0, width, height);//black plataform
-            newWorld[11] = thirdWorld.crop(100, 300, width, height);//wall
-            newWorld[12] = thirdWorld.crop(119, 300, width, height);//right corner wall
-            newWorld[13] = thirdWorld.crop(19, 300, width, height);//left corner wall
-            newWorld[14] = thirdWorld.crop(67, 192, width, height);// NOT USED more floors
-            newWorld[15] = thirdWorld.crop(119, 60, width, height);//lower wall tile
-            newWorld[16] = thirdWorld.crop(120, 79, width, height);//wall panels
-            newWorld[17] = thirdWorld.crop(180, 120, width, height);//more wall panels
-            newWorld[18] = thirdWorld.crop(259, 220, width, height);//glass
-            newWorld[19] = thirdWorld.crop(280, 260, width, height);//horizontal glass
-            newWorld[20] = thirdWorld.crop(319, 19, width, height);//wall with lasers
-            newWorld[21] = thirdWorld.crop(159, 320, width, height);//white block
-            newWorld[22] = thirdWorld.crop(318, 240, width, height);//up arrow
-            newWorld[23] = thirdWorld.crop(298, 240, width, height);//left arrow
-            newWorld[24] = moreThirdWorld.crop(380, 80, width, height);//blue block
-            newWorld[25] = moreThirdWorld.crop(420, 100, width, height);//black block with blue center
-            newWorld[26] = moreThirdWorld.crop(380, 160, width, height);//red block
-            newWorld[27] = moreThirdWorld.crop(420, 180, width, height);//black block with red center
+            newWorld[13] = thirdWorld.crop(159, 62, width, height); //other door
+            newWorld[28] = thirdWorld.crop(60, 0, width, height);//blue plataform
+            newWorld[21] = thirdWorld.crop(0, 0, 35, 35);//black plataform
+            newWorld[16] = thirdWorld.crop(0, 79, width, height);//wall panels
+            newWorld[17] = thirdWorld.crop(0, 120, width, height);//more wall panels
+            newWorld[18] = thirdWorld.crop(141, 221, 20, 20);//glass
+            newWorld[19] = thirdWorld.crop(201, 261, 20, 20);//horizontal glass
+            newWorld[20] = thirdWorld.crop(319, 20, 40, 40);//wall with lasers
+            newWorld[22] = thirdWorld.crop(201, 241, width, height);//up arrow
+            newWorld[23] = thirdWorld.crop(281, 241, width, height);//left arrow
+            newWorld[24] = moreThirdWorld.crop(321, 80, width, height);//blue block
+            newWorld[25] = moreThirdWorld.crop(382, 100, width, height);//black block with blue center
+            newWorld[26] = moreThirdWorld.crop(321, 160, width, height);//red block
+            newWorld[27] = moreThirdWorld.crop(382, 180, width, height);//black block with red center
             
 
             //player anim
