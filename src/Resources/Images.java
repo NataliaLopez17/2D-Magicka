@@ -53,9 +53,9 @@ public class Images {
     public static BufferedImage L;
     public static BufferedImage LP;
     public static BufferedImage Pause;
+    public static BufferedImage gameOver;
     public static BufferedImage[] Resume;
     public static BufferedImage[] BTitle;
-    public static BufferedImage[] Options;
     public static BufferedImage[] Runes;
     public static ImageIcon icon;
     public static BufferedImage[] FireBallLeft;
@@ -72,6 +72,7 @@ public class Images {
 	public static BufferedImage tradeBox;
 	public static BufferedImage companionItem;
 	public static BufferedImage netherStar;
+	public static BufferedImage gameBeat;
 
     public Images() {
 
@@ -126,7 +127,6 @@ public class Images {
         numbers = new BufferedImage[21];
         Resume = new BufferedImage[2];
         BTitle = new BufferedImage[2];
-        Options = new BufferedImage[2];
         Runes = new BufferedImage[36];
 
         FireBallLeft = new BufferedImage[6];
@@ -151,7 +151,9 @@ public class Images {
             netherStar = ImageIO.read(getClass().getResourceAsStream("/Sheets/nether_star.png"));
             
             inventory = ImageIO.read(getClass().getResourceAsStream("/Sheets/guit.png"));
-            title = ImageIO.read(getClass().getResourceAsStream("/Sheets/Title.png"));
+            title = ImageIO.read(getClass().getResourceAsStream("/Sheets/start screen.png"));
+            gameBeat = ImageIO.read(getClass().getResourceAsStream("/Sheets/game beat screen.png"));
+            gameOver = ImageIO.read(getClass().getResourceAsStream("/Sheets/gameoverstate.png"));
             door = ImageIO.read(getClass().getResourceAsStream("/Sheets/Door.png"));
             E = ImageIO.read(getClass().getResourceAsStream("/Buttons/E.png"));
             EP = ImageIO.read(getClass().getResourceAsStream("/Buttons/EP.png"));
@@ -162,8 +164,6 @@ public class Images {
             Resume[1] = ImageIO.read(getClass().getResourceAsStream("/Buttons/ResumeP.png"));
             BTitle[0] = ImageIO.read(getClass().getResourceAsStream("/Buttons/BTitle.png"));
             BTitle[1] = ImageIO.read(getClass().getResourceAsStream("/Buttons/BTitleP.png"));
-            Options[0] = ImageIO.read(getClass().getResourceAsStream("/Buttons/Options.png"));
-            Options[1] = ImageIO.read(getClass().getResourceAsStream("/Buttons/OptionsP.png"));
 
             //icon
             icon = new ImageIcon(runesheet.crop(Rwidth*1,Rheight*0,Rwidth,Rheight));
@@ -266,9 +266,7 @@ public class Images {
             newWorld[28] = thirdWorld.crop(60, 0, width, height);//blue plataform
             newWorld[21] = thirdWorld.crop(0, 0, 35, 35);//black plataform
             newWorld[19] = thirdWorld.crop(141, 221, 20, 20);//glass
-            newWorld[20] = thirdWorld.crop(319, 20, 40, 40);//wall with lasers
-            newWorld[22] = thirdWorld.crop(201, 241, width, height);//up arrow
-            newWorld[23] = thirdWorld.crop(281, 241, width, height);//left arrow
+            newWorld[20] = thirdWorld.crop(319, 20, 40, 40);//wall with laser
             newWorld[24] = moreThirdWorld.crop(321, 80, width, height);//blue block
             newWorld[25] = moreThirdWorld.crop(382, 100, width, height);//black block with blue center
             newWorld[26] = moreThirdWorld.crop(321, 160, width, height);//red block

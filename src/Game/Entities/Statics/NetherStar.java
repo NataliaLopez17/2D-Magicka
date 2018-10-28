@@ -37,15 +37,16 @@ public class NetherStar extends StaticEntity {
         bounds.y=0;
         bounds.width = 64;
         bounds.height = 64;
-        health=2;
+        health=16;
 
         try {
-            audioFile = new File("res/music/restoringHealth.wav");
+            audioFile = new File("res/music/ping.wav");
             audioStream = AudioSystem.getAudioInputStream(audioFile);
             format = audioStream.getFormat();
             info = new DataLine.Info(Clip.class, format);
             audioClip = (Clip) AudioSystem.getLine(info);
             audioClip.open(audioStream);
+//            audioClip.loop(3);
 
 
 

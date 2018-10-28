@@ -33,8 +33,6 @@ public class Tile {
     public static Tile blackPlataformTile = new BlackPlataformTile(Images.newWorld[21], 21);
     public static Tile glassTile = new GlassTile(19);
     public static Tile wallWithLasersTile = new WallWithLasersTile(Images.newWorld[20],20);
-    public static Tile upArrowTile = new UpArrowTile(22);
-    public static Tile leftArrowTile = new LeftArrowTile(23);
     public static Tile blueBlockTile = new BlueBlockTile(24);
     public static Tile blackBlockWithBlueCenterTile = new BlackBlockWithBlueCenterTile(25);
     public static Tile redBlockTile = new RedBlockTile(26);

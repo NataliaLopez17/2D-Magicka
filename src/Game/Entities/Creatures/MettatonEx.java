@@ -1,6 +1,7 @@
 package Game.Entities.Creatures;
 
 import Game.Entities.EntityBase;
+import Game.GameStates.State;
 import Game.Inventories.Inventory;
 import Game.Items.Item;
 import Main.Handler;
@@ -190,8 +191,7 @@ public class MettatonEx extends CreatureBase  {
 
     @Override
     public void die() {
-    	handler.getWorld().getItemManager().addItem(Item.keyItem.createNew((int)x + bounds.x,(int)y + bounds.y,1));
-
-
+    	System.out.println("YOU WIN!!!!!");
+		State.setState(handler.getGame().gameState);
     }
 }

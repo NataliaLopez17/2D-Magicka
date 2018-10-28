@@ -26,6 +26,16 @@
 			<location>C:/Users/NATALIA E/Desktop/Magika/companionItem.png</location>
 		</link>
 		<link>
+			<name>res/Sheets/game beat screen.png</name>
+			<type>1</type>
+			<location>C:/Users/NATALIA E/Desktop/Magika/game beat screen.png</location>
+		</link>
+		<link>
+			<name>res/Sheets/gameoverstate.png</name>
+			<type>1</type>
+			<location>C:/Users/NATALIA E/Desktop/Magika/gameoverstate.png</location>
+		</link>
+		<link>
 			<name>res/Sheets/healthpotion.png</name>
 			<type>1</type>
 			<location>C:/Users/NATALIA E/Desktop/Magika/healthpotion.png</location>
@@ -51,6 +61,11 @@
 			<location>C:/Users/NATALIA E/Desktop/Magika/pack.png</location>
 		</link>
 		<link>
+			<name>res/Sheets/start screen.png</name>
+			<type>1</type>
+			<location>C:/Users/NATALIA E/Desktop/Magika/start screen.png</location>
+		</link>
+		<link>
 			<name>res/Sheets/textures third world.png</name>
 			<type>1</type>
 			<location>C:/Users/NATALIA E/Desktop/Magika/textures third world.png</location>
@@ -66,9 +81,9 @@
 			<location>C:/Users/NATALIA E/Desktop/Magika/thirdWorldmore.png</location>
 		</link>
 		<link>
-			<name>res/music/OHjp_EESacg.wav</name>
+			<name>res/Sheets/undertale_box.png</name>
 			<type>1</type>
-			<location>C:/Users/NATALIA E/Desktop/Magika/OHjp_EESacg.wav</location>
+			<location>C:/Users/NATALIA E/Desktop/Magika/undertale_box.png</location>
 		</link>
 	</linkedResources>
 </projectDescription>
