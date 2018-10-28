@@ -19,16 +19,16 @@ public class TheCoreWorld extends BaseWorld{
         this.player=player;
 
         entityManager.addEntity(new MettatonEx(handler, 1200, 400));
-        entityManager.addEntity(new NetherStar(handler, 1100, 800));
-        entityManager.addEntity(new NetherStar(handler, 1000, 800));
-        entityManager.addEntity(new NetherStar(handler, 900, 800));
-        entityManager.addEntity(new NetherStar(handler, 800, 800));
-        entityManager.addEntity(new NetherStar(handler, 700, 800));
-        entityManager.addEntity(new NetherStar(handler, 600, 800));
-        entityManager.addEntity(new NetherStar(handler, 500, 800));
+        entityManager.addEntity(new NetherStar(handler, 1100, 1200));
+        entityManager.addEntity(new NetherStar(handler, 1000, 1200));
+        entityManager.addEntity(new NetherStar(handler, 900, 1200));
+        entityManager.addEntity(new NetherStar(handler, 800, 1200));
+        entityManager.addEntity(new NetherStar(handler, 700, 1200));
+        entityManager.addEntity(new NetherStar(handler, 600, 1200));
+        entityManager.addEntity(new NetherStar(handler, 500, 1200));
        
         
-        entityManager.getPlayer().setX(60);
+        entityManager.getPlayer().setX(20);
         entityManager.getPlayer().setY(1200);	
     }
 

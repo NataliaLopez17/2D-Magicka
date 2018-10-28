@@ -51,6 +51,11 @@
 			<location>C:/Users/NATALIA E/Desktop/Magika/pack.png</location>
 		</link>
 		<link>
+			<name>res/Sheets/textures third world.png</name>
+			<type>1</type>
+			<location>C:/Users/NATALIA E/Desktop/Magika/textures third world.png</location>
+		</link>
+		<link>
 			<name>res/Sheets/thirdWorld.png</name>
 			<type>1</type>
 			<location>C:/Users/NATALIA E/Desktop/Magika/thirdWorld.png</location>

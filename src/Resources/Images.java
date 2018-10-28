@@ -18,6 +18,8 @@ public class Images {
 
     public static BufferedImage[] blocks;
     public static BufferedImage[] newWorld;
+    public static BufferedImage[] theNewCore;
+    
     public static BufferedImage[] player_right;
     public static BufferedImage[] player_left;
     public static BufferedImage[] player_front;
@@ -85,11 +87,12 @@ public class Images {
         SpriteSheet thirdWorld = new SpriteSheet(Images.loadImage("/Sheets/thirdWorld.png"));
         SpriteSheet moreThirdWorld = new SpriteSheet(Images.loadImage("/Sheets/thirdWorldmore.png"));
         SpriteSheet MettatonEx = new SpriteSheet(Images.loadImage("/Sheets/MettatonEx.png"));
-        SpriteSheet netherStar = new SpriteSheet(Images.loadImage("/Sheets/nether_star.png"));
+        SpriteSheet newCore = new SpriteSheet(Images.loadImage("/Sheets/textures third world.png"));
 
 
         blocks = new BufferedImage[16];
         newWorld = new BufferedImage[29];
+        theNewCore = new BufferedImage[35];
 
         player_left = new BufferedImage[4];
         player_right = new BufferedImage[4];
@@ -145,7 +148,8 @@ public class Images {
             niceCreamTrader = ImageIO.read(getClass().getResourceAsStream("/Sheets/niceCreamGuy.png"));
             tradeBox = ImageIO.read(getClass().getResourceAsStream("/Sheets/undertale_box.png"));
             companionItem = ImageIO.read(getClass().getResourceAsStream("/Sheets/companionItem.png"));
-
+            netherStar = ImageIO.read(getClass().getResourceAsStream("/Sheets/nether_star.png"));
+            
             inventory = ImageIO.read(getClass().getResourceAsStream("/Sheets/guit.png"));
             title = ImageIO.read(getClass().getResourceAsStream("/Sheets/Title.png"));
             door = ImageIO.read(getClass().getResourceAsStream("/Sheets/Door.png"));
@@ -259,13 +263,9 @@ public class Images {
             
             
             //third World images
-            newWorld[13] = thirdWorld.crop(159, 62, width, height); //other door
             newWorld[28] = thirdWorld.crop(60, 0, width, height);//blue plataform
             newWorld[21] = thirdWorld.crop(0, 0, 35, 35);//black plataform
-            newWorld[16] = thirdWorld.crop(0, 79, width, height);//wall panels
-            newWorld[17] = thirdWorld.crop(0, 120, width, height);//more wall panels
-            newWorld[18] = thirdWorld.crop(141, 221, 20, 20);//glass
-            newWorld[19] = thirdWorld.crop(201, 261, 20, 20);//horizontal glass
+            newWorld[19] = thirdWorld.crop(141, 221, 20, 20);//glass
             newWorld[20] = thirdWorld.crop(319, 20, 40, 40);//wall with lasers
             newWorld[22] = thirdWorld.crop(201, 241, width, height);//up arrow
             newWorld[23] = thirdWorld.crop(281, 241, width, height);//left arrow
@@ -274,7 +274,14 @@ public class Images {
             newWorld[26] = moreThirdWorld.crop(321, 160, width, height);//red block
             newWorld[27] = moreThirdWorld.crop(382, 180, width, height);//black block with red center
             
-
+            theNewCore[29] = newCore.crop(224, 32, width, height);//yellow block
+            theNewCore[30] = newCore.crop(289, 32, width, height);//green block
+            theNewCore[31] = newCore.crop(65, 128, width, height);//white block
+            theNewCore[32] = newCore.crop(0, 128, width, height);//light grey block
+            theNewCore[33] = newCore.crop(33, 224, width, height);//black block
+            theNewCore[34] = newCore.crop(64, 224, width, height);//charcoal grey block
+            
+            
             //player anim
             player_front[0]=newsheet.crop(132,131,width,height);
             player_front[1]=newsheet.crop(164,131,width,height);

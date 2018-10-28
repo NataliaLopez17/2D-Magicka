@@ -29,13 +29,9 @@ public class Tile {
     public static Tile waterTile = new WaterTile(15);
     
     
-    public static Tile otherDoorTile = new WalkableDoorTile(13); 
     public static Tile bluePlataformTile = new BluePlataformTile(18);
     public static Tile blackPlataformTile = new BlackPlataformTile(Images.newWorld[21], 21);
-    public static Tile wallPanelsTile = new WallPanelsTile(Images.newWorld[16],16);
-    public static Tile moreWallPanelsTile = new MoreWallPanelsTile(Images.newWorld[17],17);
-    public static Tile glassTile = new GlassTile(18);
-    public static Tile horizontalGlassTile = new HorizontalGlassTile(19);
+    public static Tile glassTile = new GlassTile(19);
     public static Tile wallWithLasersTile = new WallWithLasersTile(Images.newWorld[20],20);
     public static Tile upArrowTile = new UpArrowTile(22);
     public static Tile leftArrowTile = new LeftArrowTile(23);
@@ -43,6 +39,14 @@ public class Tile {
     public static Tile blackBlockWithBlueCenterTile = new BlackBlockWithBlueCenterTile(25);
     public static Tile redBlockTile = new RedBlockTile(26);
     public static Tile blackBlockWithRedCenterTile = new BlackBlockWithRedCenterTile(27);
+    
+    public static Tile yellowBlock = new YellowBlock(29);
+    public static Tile greenBlock = new GreenBlock(30);
+    public static Tile whiteBlock = new WhiteBlock(31);
+    public static Tile lightGreyBlock = new LightGreyBlock(32);
+    public static Tile blackBlock = new BlackBlock(Images.theNewCore[33], 33);
+    public static Tile charcoalGreyBlock = new ChacoalGreyBlock(34);
+    
     
     
     

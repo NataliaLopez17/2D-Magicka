@@ -7,6 +7,6 @@ import Resources.Images;
  */
 public class UpArrowTile extends Tile {
     public UpArrowTile( int id) {
-        super(Images.newWorld[22], id);
+        super(Images.theNewCore[22], id);
     }
 }
