@@ -81,7 +81,7 @@ public class Images {
         SpriteSheet FireBallDownsheet = new SpriteSheet(Images.loadImage("/Sheets/FireBallDown.png"));
         SpriteSheet NewEnemy = new SpriteSheet(Images.loadImage("/Sheets/Undyne.png"));
         SpriteSheet Sans = new SpriteSheet(Images.loadImage("/Sheets/companion.png"));
-        SpriteSheet thirdWorld = new SpriteSheet(Images.loadImage("/Sheets/thirdWorldmore.png"));
+        SpriteSheet thirdWorld = new SpriteSheet(Images.loadImage("/Sheets/thirdWorld.png"));
         SpriteSheet moreThirdWorld = new SpriteSheet(Images.loadImage("/Sheets/thirdWorldmore.png"));
         SpriteSheet MettatonEx = new SpriteSheet(Images.loadImage("/Sheets/MettatonEx.png"));
 
@@ -276,7 +276,7 @@ public class Images {
             newWorld[17] = thirdWorld.crop(180, 120, width, height);//more wall panels
             newWorld[18] = thirdWorld.crop(259, 220, width, height);//glass
             newWorld[19] = thirdWorld.crop(280, 260, width, height);//horizontal glass
-            newWorld[20] = thirdWorld.crop(359, 19, width, height);//wall with lasers
+            newWorld[20] = thirdWorld.crop(319, 19, width, height);//wall with lasers
             newWorld[21] = thirdWorld.crop(159, 320, width, height);//white block
             newWorld[22] = thirdWorld.crop(318, 240, width, height);//up arrow
             newWorld[23] = thirdWorld.crop(298, 240, width, height);//left arrow

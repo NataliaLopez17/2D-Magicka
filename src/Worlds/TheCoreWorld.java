@@ -1,8 +1,6 @@
 package Worlds;
-import Game.Entities.Creatures.UndyneEnemy;
 import Game.Entities.Creatures.MettatonEx;
 import Game.Entities.Creatures.Player;
-import Game.Entities.Creatures.SansCompanion;
 import Main.Handler;
 
 /**
@@ -20,8 +18,8 @@ public class TheCoreWorld extends BaseWorld{
 
         entityManager.addEntity(new MettatonEx(handler, 1200, 400));
         
-        	
-
+        entityManager.getPlayer().setX(spawnX);
+        entityManager.getPlayer().setY(spawnY);	
     }
 
 }

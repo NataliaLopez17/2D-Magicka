@@ -15,7 +15,6 @@ import Main.Handler;
 public class World1 extends BaseWorld{
 
     public static BaseWorld caveWorld;
-    public static BaseWorld theCoreWorld;
     
 
     public World1(Handler handler, String path, Player player){

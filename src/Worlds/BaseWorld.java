@@ -19,7 +19,6 @@ import Resources.Utils;
  */
 public class BaseWorld {
 
-	public static BaseWorld theCoreWorld;
 	public static BaseWorld world1;
 	public boolean oof;
 
