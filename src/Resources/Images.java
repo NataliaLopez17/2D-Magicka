@@ -255,7 +255,7 @@ public class Images {
             blocks[12] = newsheet.crop(0,260,Bwidth,Bheight);//mossyrock
             blocks[13] = newsheet.crop(176,0,Bwidth,Bheight*2);//tree
             blocks[14] = newsheet.crop(174,410,78,74);//rock
-            blocks[15] = ImageIO.read(getClass().getResourceAsStream("/Blocks/pack.png"));
+            blocks[15] = ImageIO.read(getClass().getResourceAsStream("/Sheets/pack.png"));
             
             
             //third World images

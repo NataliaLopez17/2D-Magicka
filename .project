@@ -21,11 +21,6 @@
 			<location>C:/Users/Giovanni/Desktop/mroe shit/shit/companion.png</location>
 		</link>
 		<link>
-			<name>res/Blocks/pack.png</name>
-			<type>1</type>
-			<location>C:/Users/NATALIA E/Desktop/Magika/pack.png</location>
-		</link>
-		<link>
 			<name>res/Sheets/companionItem.png</name>
 			<type>1</type>
 			<location>C:/Users/NATALIA E/Desktop/Magika/companionItem.png</location>
@@ -49,6 +44,11 @@
 			<name>res/Sheets/newObject.png</name>
 			<type>1</type>
 			<location>C:/Users/NATALIA E/Desktop/Magika/newObject.png</location>
+		</link>
+		<link>
+			<name>res/Sheets/pack.png</name>
+			<type>1</type>
+			<location>C:/Users/NATALIA E/Desktop/Magika/pack.png</location>
 		</link>
 		<link>
 			<name>res/Sheets/thirdWorld.png</name>

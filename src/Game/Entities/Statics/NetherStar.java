@@ -40,7 +40,7 @@ public class NetherStar extends StaticEntity {
         health=2;
 
         try {
-            audioFile = new File("res/music/OHjp_EESacg.wav");
+            audioFile = new File("res/music/restoringHealth.wav");
             audioStream = AudioSystem.getAudioInputStream(audioFile);
             format = audioStream.getFormat();
             info = new DataLine.Info(Clip.class, format);

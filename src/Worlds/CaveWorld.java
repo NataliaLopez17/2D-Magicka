@@ -19,10 +19,10 @@ public class CaveWorld extends BaseWorld{
         
         entityManager.addEntity(new CaveWorldDoor(handler, 100, 0, theCoreWorld));
         entityManager.addEntity(new UndyneEnemy(handler, 1200, 400));
-        entityManager.addEntity(new Laptop(handler, 1200, 400));
+        entityManager.addEntity(new Laptop(handler, 1000, 400));
         entityManager.addEntity(new Laptop(handler, 550, 500));
         entityManager.addEntity(new Laptop(handler, 800, 100));
-        entityManager.addEntity(new Laptop(handler, 30, 50));
+        entityManager.addEntity(new Laptop(handler, 300, 50));
         entityManager.addEntity(new Laptop(handler, 100, 300));
         entityManager.addEntity(new Laptop(handler, 1000, 1000));
        

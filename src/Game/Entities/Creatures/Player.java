@@ -96,9 +96,7 @@ public class Player extends CreatureBase {
 			else {
 				continue;
 			}
-		}
-			
-			
+		}	
 
 		//Animations
 		animDown.tick();
@@ -152,11 +150,7 @@ public class Player extends CreatureBase {
 		}else if(handler.getKeyManager().fattbut){
 
 			fireAttack();
-
-
 		}
-
-
 		//Inventory
 		inventory.tick();
 
@@ -172,10 +166,6 @@ public class Player extends CreatureBase {
 			FireBallAttack(g);
 
 		}
-
-
-
-
 		g.setColor(Color.BLACK);
 		g.drawRect((int)(x-handler.getGameCamera().getxOffset()-1),(int)(y-handler.getGameCamera().getyOffset()-21),76,11);
 		if(this.getHealth()>50){

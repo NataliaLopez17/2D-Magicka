@@ -28,8 +28,7 @@ public class GameState extends State {
         if(handler.getKeyManager().skip) {
         	handler.setWorld(World1.caveWorld);
         }
-//        handler.setWorld(CaveWorld.theCoreWorld);
-
+        
     }
 
     @Override

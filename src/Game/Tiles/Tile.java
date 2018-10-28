@@ -26,12 +26,12 @@ public class Tile {
     public static Tile rightwallTile = new BorderTile(Images.blocks[9],9);
     public static Tile topwallTile = new BorderTile(Images.blocks[10],10);
     public static Tile lowerwallTile = new BorderTile(Images.blocks[11],11);
-    
+    public static Tile waterTile = new WaterTile(15);
     
     
     public static Tile otherDoorTile = new WalkableDoorTile(13); 
-    public static Tile bluePlataformTile = new BluePlataformTile(15);
-    public static Tile blackPlataformTile = new BlackPlataformTile(Images.newWorld[14], 14);
+    public static Tile bluePlataformTile = new BluePlataformTile(18);
+    public static Tile blackPlataformTile = new BlackPlataformTile(Images.newWorld[21], 21);
     public static Tile wallPanelsTile = new WallPanelsTile(Images.newWorld[16],16);
     public static Tile moreWallPanelsTile = new MoreWallPanelsTile(Images.newWorld[17],17);
     public static Tile glassTile = new GlassTile(18);
