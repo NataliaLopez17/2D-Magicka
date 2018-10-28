@@ -256,21 +256,21 @@ public class Images {
             
             
             //third World images
-            newWorld[0] = thirdWorld.crop(233, 0, width, height); //door
+            newWorld[0] = thirdWorld.crop(233, 0, width, height); //NOT USED door
             newWorld[1] = thirdWorld.crop(242, 61, width, height); //other door
             newWorld[2] = thirdWorld.crop(140, 190, width, height); //upper railing
-            newWorld[3] = thirdWorld.crop(142, 207, width, height);//lower railing
+            newWorld[3] = thirdWorld.crop(142, 207, width, height);// NOT USED lower railing
             newWorld[4] = thirdWorld.crop(140, 259, width, height); //bridge
-            newWorld[5] = thirdWorld.crop(119, 100, width, height);//stilts
+            newWorld[5] = thirdWorld.crop(119, 100, width, height);// NOT USED stilts
             newWorld[6] = thirdWorld.crop(160, 140, width, height);//other stilt
-            newWorld[7] = thirdWorld.crop(100, 93, width, height);//pole
+            newWorld[7] = thirdWorld.crop(100, 93, width, height);// NOT USED pole
             newWorld[8] = thirdWorld.crop(140, 121, width, height);//laser
             newWorld[9] = thirdWorld.crop(119, 0, width, height);//blue plataform
             newWorld[10] = thirdWorld.crop(49, 0, width, height);//black plataform
             newWorld[11] = thirdWorld.crop(100, 300, width, height);//wall
             newWorld[12] = thirdWorld.crop(119, 300, width, height);//right corner wall
             newWorld[13] = thirdWorld.crop(19, 300, width, height);//left corner wall
-            newWorld[14] = thirdWorld.crop(67, 192, width, height);//more floors
+            newWorld[14] = thirdWorld.crop(67, 192, width, height);// NOT USED more floors
             newWorld[15] = thirdWorld.crop(119, 60, width, height);//lower wall tile
             newWorld[16] = thirdWorld.crop(120, 79, width, height);//wall panels
             newWorld[17] = thirdWorld.crop(180, 120, width, height);//more wall panels

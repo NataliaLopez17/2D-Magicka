@@ -15,7 +15,7 @@ public class CaveWorld extends BaseWorld{
     public CaveWorld(Handler handler, String path, Player player) {
         super(handler,path,player);
         
-        theCoreWorld = new TheCoreWorld(handler,"res/Maps/caveMap.map",player);
+        theCoreWorld = new TheCoreWorld(handler,"res/Maps/thirdWorldMap.map",player);
         
         entityManager.addEntity(new CaveWorldDoor(handler, 100, 0, theCoreWorld));
         entityManager.addEntity(new UndyneEnemy(handler, 1200, 400));

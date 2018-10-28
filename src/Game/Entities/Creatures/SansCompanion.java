@@ -129,8 +129,9 @@ public class SansCompanion extends CreatureBase  {
 			for (EntityBase e : handler.getWorld().getEntityManager().getEntities()) {
 				if (e.equals(this))
 					continue;
-				if (e.getCollisionBounds(0, 0).intersects(ar) && e.equals(handler.getWorld().getEntityManager().getPlayer())) {
-					continue;
+				if (e.getCollisionBounds(0, 0).intersects(ar) && (!(e.equals(handler.getWorld().getEntityManager().getPlayer())))) {
+					checkAttacks();
+					return;
 				}
 			}
 

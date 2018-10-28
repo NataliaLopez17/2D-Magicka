@@ -32,12 +32,12 @@ public class MettatonEx extends CreatureBase  {
 
     public MettatonEx(Handler handler, float x, float y) {
         super(handler, x, y, 120, 90);
-        bounds.x=8*2;
-        bounds.y=18*2;
-        bounds.width=16*2;
-        bounds.height=14*2;
+        bounds.x=50;
+        bounds.y=50;
+        bounds.width=50;
+        bounds.height=50;
         speed=1.5f;
-        health=2;
+        health=150;
 
         MettatonCam= new Rectangle();
 
@@ -181,7 +181,7 @@ public class MettatonEx extends CreatureBase  {
         g.drawImage(getCurrentAnimationFrame(animDown,animUp,animLeft,animRight,Images.mettaton_front,Images.mettaton_back,Images.mettaton_left,Images.mettaton_right), (int) (x - handler.getGameCamera().getxOffset()), (int) (y - handler.getGameCamera().getyOffset()), width, height, null);
         if(isBeinghurt() && healthcounter<=120){
             g.setColor(Color.white);
-            g.drawString("SkelyHealth: " + getHealth(),(int) (x-handler.getGameCamera().getxOffset()),(int) (y-handler.getGameCamera().getyOffset()-20));
+            g.drawString("Mettaton Ex Health: " + getHealth(),(int) (x-handler.getGameCamera().getxOffset()),(int) (y-handler.getGameCamera().getyOffset()-20));
         }
     }
 
