@@ -41,7 +41,7 @@ public class Tile {
     public static Tile wallTile = new BorderTile(Images.newWorld[11],11);
     public static Tile rightCornerWallTile = new BorderTile(Images.newWorld[12],12);
     public static Tile leftCornerWallTile = new BorderTile(Images.newWorld[13],13);
-    public static Tile moreFloorsTile = new BorderTile(Images.newWorld[14],14);
+    public static Tile moreFloorsTile = new BorderTile(Images.newWorld[14],14);//not used
     public static Tile lowerWallTile = new BorderTile(Images.newWorld[15],15);
     public static Tile wallPanelsTile = new BorderTile(Images.newWorld[16],16);
     public static Tile moreWallPanelsTile = new BorderTile(Images.newWorld[17],17);

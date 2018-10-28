@@ -5,8 +5,8 @@ import java.awt.image.BufferedImage;
 /**
  * Created by Elemental on 1/1/2017.
  */
-public class BlackPlataformTile extends Tile {
-    public BlackPlataformTile(BufferedImage texture,int id) {
+public class WallTile extends Tile {
+    public WallTile(BufferedImage texture,int id) {
         super(texture, id);
 
     }
