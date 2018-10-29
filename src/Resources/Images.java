@@ -153,7 +153,6 @@ public class Images {
             inventory = ImageIO.read(getClass().getResourceAsStream("/Sheets/guit.png"));
             title = ImageIO.read(getClass().getResourceAsStream("/Sheets/start screen.png"));
             gameBeat = ImageIO.read(getClass().getResourceAsStream("/Sheets/game beat screen.png"));
-            gameOver = ImageIO.read(getClass().getResourceAsStream("/Sheets/gameoverstate.png"));
             door = ImageIO.read(getClass().getResourceAsStream("/Sheets/Door.png"));
             E = ImageIO.read(getClass().getResourceAsStream("/Buttons/E.png"));
             EP = ImageIO.read(getClass().getResourceAsStream("/Buttons/EP.png"));
@@ -263,9 +262,9 @@ public class Images {
             
             
             //third World images
-            newWorld[28] = thirdWorld.crop(60, 0, width, height);//blue plataform
+            newWorld[28] = thirdWorld.crop(60, 0, 35, 35);//blue plataform
             newWorld[21] = thirdWorld.crop(0, 0, 35, 35);//black plataform
-            newWorld[19] = thirdWorld.crop(141, 221, 20, 20);//glass
+            newWorld[19] = thirdWorld.crop(141, 221, 15, 15);//glass
             newWorld[20] = thirdWorld.crop(319, 20, 40, 40);//wall with laser
             newWorld[24] = moreThirdWorld.crop(321, 80, width, height);//blue block
             newWorld[25] = moreThirdWorld.crop(382, 100, width, height);//black block with blue center

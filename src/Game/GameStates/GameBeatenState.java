@@ -1,15 +1,12 @@
 package Game.GameStates;
 
+import java.awt.Graphics;
 
-
-import Main.Game;
+import Main.Handler;
 import Resources.Images;
 import UI.ClickListlener;
 import UI.UIImageButton;
 import UI.UIManager;
-import Main.Handler;
-
-import java.awt.*;
 
 /**
  * Created by Elemental on 12/10/2016.
@@ -29,7 +26,7 @@ public class GameBeatenState extends State {
             public void onClick() {
                 handler.getMouseManager().setUimanager(null);
                 handler.getGame().reStart();
-                State.setState(handler.getGame().gameState);
+                State.setState(handler.getGame().gameBeatState);
             }
         }));
     }
@@ -46,8 +43,6 @@ public class GameBeatenState extends State {
 
     @Override
     public void render(Graphics g) {
-        g.setColor(Color.darkGray);
-        g.fillRect(0,0,handler.getWidth(),handler.getHeight());
         g.drawImage(Images.gameBeat,0,0,800,600,null);
         uiManager.Render(g);
 

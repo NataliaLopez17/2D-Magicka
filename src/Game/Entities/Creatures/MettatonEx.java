@@ -1,15 +1,16 @@
 package Game.Entities.Creatures;
 
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Rectangle;
+import java.util.Random;
+
 import Game.Entities.EntityBase;
 import Game.GameStates.State;
 import Game.Inventories.Inventory;
-import Game.Items.Item;
 import Main.Handler;
 import Resources.Animation;
 import Resources.Images;
-
-import java.awt.*;
-import java.util.Random;
 
 /**
  * Created by Elemental on 2/7/2017.
@@ -33,12 +34,12 @@ public class MettatonEx extends CreatureBase  {
 
     public MettatonEx(Handler handler, float x, float y) {
         super(handler, x, y, 120, 90);
-        bounds.x=50;
-        bounds.y=50;
-        bounds.width=50;
-        bounds.height=50;
+        bounds.x=100;
+        bounds.y=100;
+        bounds.width=100;
+        bounds.height=100;
         speed=1.5f;
-        health=150;
+        health=2;
 
         MettatonCam= new Rectangle();
 
@@ -192,6 +193,6 @@ public class MettatonEx extends CreatureBase  {
     @Override
     public void die() {
     	System.out.println("YOU WIN!!!!!");
-		State.setState(handler.getGame().gameState);
+		State.setState(handler.getGame().gameBeatState);
     }
 }

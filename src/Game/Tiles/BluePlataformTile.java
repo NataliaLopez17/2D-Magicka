@@ -7,6 +7,6 @@ import Resources.Images;
  */
 public class BluePlataformTile extends Tile {
     public BluePlataformTile( int id) {
-        super(Images.newWorld[9], id);
+        super(Images.newWorld[18], id);
     }
 }

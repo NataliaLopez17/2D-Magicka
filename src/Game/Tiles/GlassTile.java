@@ -7,6 +7,6 @@ import Resources.Images;
  */
 public class GlassTile extends Tile {
     public GlassTile( int id) {
-        super(Images.newWorld[18], id);
+        super(Images.newWorld[19], id);
     }
 }
