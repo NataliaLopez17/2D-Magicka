@@ -26,7 +26,7 @@ public class GameBeatenState extends State {
             public void onClick() {
                 handler.getMouseManager().setUimanager(null);
                 handler.getGame().reStart();
-                State.setState(handler.getGame().gameBeatState);
+                State.setState(handler.getGame().menuState);
             }
         }));
     }

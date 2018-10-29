@@ -34,8 +34,8 @@ public class MettatonEx extends CreatureBase  {
 
     public MettatonEx(Handler handler, float x, float y) {
         super(handler, x, y, 120, 90);
-        bounds.x=100;
-        bounds.y=100;
+        bounds.x=0;
+        bounds.y=0;
         bounds.width=100;
         bounds.height=100;
         speed=1.5f;
