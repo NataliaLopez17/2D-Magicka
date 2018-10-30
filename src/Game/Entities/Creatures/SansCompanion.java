@@ -37,7 +37,7 @@ public class SansCompanion extends CreatureBase  {
 		bounds.y=18*2;
 		bounds.width=16*2;
 		bounds.height=14*2;
-		speed=1.5f;
+		speed=2.0f;
 		health=100;
 
 		CompanionCam= new Rectangle();

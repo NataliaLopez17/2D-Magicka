@@ -1,6 +1,7 @@
 package Game.Entities.Creatures;
 
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Rectangle;
 import java.util.Random;
@@ -34,12 +35,12 @@ public class MettatonEx extends CreatureBase  {
 
     public MettatonEx(Handler handler, float x, float y) {
         super(handler, x, y, 120, 90);
-        bounds.x=0;
-        bounds.y=0;
-        bounds.width=100;
-        bounds.height=100;
-        speed=1.5f;
-        health=2;
+        bounds.x=25;
+		bounds.y=42;
+		bounds.width=42;
+		bounds.height=42;
+        speed=2.5f;
+        health=100;
 
         MettatonCam= new Rectangle();
 
@@ -182,7 +183,9 @@ public class MettatonEx extends CreatureBase  {
     public void render(Graphics g) {
         g.drawImage(getCurrentAnimationFrame(animDown,animUp,animLeft,animRight,Images.mettaton_front,Images.mettaton_back,Images.mettaton_left,Images.mettaton_right), (int) (x - handler.getGameCamera().getxOffset()), (int) (y - handler.getGameCamera().getyOffset()), width, height, null);
         if(isBeinghurt() && healthcounter<=120){
-            g.setColor(Color.white);
+        	Font stringfont2 = new Font("SansSerif", Font.PLAIN, 20);
+			g.setFont(stringfont2);
+            g.setColor(Color.WHITE);
             g.drawString("Mettaton Ex Health: " + getHealth(),(int) (x-handler.getGameCamera().getxOffset()),(int) (y-handler.getGameCamera().getyOffset()-20));
         }
     }

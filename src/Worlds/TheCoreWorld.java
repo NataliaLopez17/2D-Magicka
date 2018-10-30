@@ -12,11 +12,13 @@ public class TheCoreWorld extends BaseWorld{
     private Handler handler;
     private Player player;
     public static int stopFollowingMeSans;
+    
 
     public TheCoreWorld(Handler handler, String path, Player player) {
         super(handler,path,player);
         this.handler = handler;
         this.player=player;
+        
 
         entityManager.addEntity(new MettatonEx(handler, 1200, 400));
         entityManager.addEntity(new NetherStar(handler, 750, 1200));
@@ -28,8 +30,7 @@ public class TheCoreWorld extends BaseWorld{
         entityManager.addEntity(new NetherStar(handler, 500, 1200));
        
         
-        entityManager.getPlayer().setX(20);
-        entityManager.getPlayer().setY(1200);	
+	
     }
 
 }

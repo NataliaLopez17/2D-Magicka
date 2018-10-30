@@ -25,9 +25,7 @@ public class CaveWorld extends BaseWorld{
         entityManager.addEntity(new Laptop(handler, 300, 50));
         entityManager.addEntity(new Laptop(handler, 100, 300));
         entityManager.addEntity(new Laptop(handler, 1000, 1000));
-       
-        entityManager.getPlayer().setX(800);
-        entityManager.getPlayer().setY(20);	
+        
     }
 
 

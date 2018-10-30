@@ -23,67 +23,27 @@
 		<link>
 			<name>res/Sheets/companionItem.png</name>
 			<type>1</type>
-			<location>C:/Users/NATALIA E/Desktop/Magika/companionItem.png</location>
-		</link>
-		<link>
-			<name>res/Sheets/game beat screen.png</name>
-			<type>1</type>
-			<location>C:/Users/NATALIA E/Desktop/Magika/game beat screen.png</location>
-		</link>
-		<link>
-			<name>res/Sheets/gameoverstate.png</name>
-			<type>1</type>
-			<location>C:/Users/NATALIA E/Desktop/Magika/gameoverstate.png</location>
+			<location>C:/Users/Giovanni/Desktop/Magika/companionItem.png</location>
 		</link>
 		<link>
 			<name>res/Sheets/healthpotion.png</name>
 			<type>1</type>
-			<location>C:/Users/NATALIA E/Desktop/Magika/healthpotion.png</location>
+			<location>C:/Users/Giovanni/Desktop/Magika/healthpotion.png</location>
 		</link>
 		<link>
 			<name>res/Sheets/moneyBag.png</name>
 			<type>1</type>
-			<location>C:/Users/NATALIA E/Desktop/Magika/moneyBag.png</location>
-		</link>
-		<link>
-			<name>res/Sheets/nether_star.png</name>
-			<type>1</type>
-			<location>C:/Users/NATALIA E/Desktop/Magika/nether_star.png</location>
+			<location>C:/Users/Giovanni/Desktop/Magika/moneyBag.png</location>
 		</link>
 		<link>
 			<name>res/Sheets/newObject.png</name>
 			<type>1</type>
-			<location>C:/Users/NATALIA E/Desktop/Magika/newObject.png</location>
+			<location>C:/Users/Giovanni/Desktop/Magika/newObject.png</location>
 		</link>
 		<link>
-			<name>res/Sheets/pack.png</name>
+			<name>res/music/OHjp_EESacg.wav</name>
 			<type>1</type>
-			<location>C:/Users/NATALIA E/Desktop/Magika/pack.png</location>
-		</link>
-		<link>
-			<name>res/Sheets/start screen.png</name>
-			<type>1</type>
-			<location>C:/Users/NATALIA E/Desktop/Magika/start screen.png</location>
-		</link>
-		<link>
-			<name>res/Sheets/textures third world.png</name>
-			<type>1</type>
-			<location>C:/Users/NATALIA E/Desktop/Magika/textures third world.png</location>
-		</link>
-		<link>
-			<name>res/Sheets/thirdWorld.png</name>
-			<type>1</type>
-			<location>C:/Users/NATALIA E/Desktop/Magika/thirdWorld.png</location>
-		</link>
-		<link>
-			<name>res/Sheets/thirdWorldmore.png</name>
-			<type>1</type>
-			<location>C:/Users/NATALIA E/Desktop/Magika/thirdWorldmore.png</location>
-		</link>
-		<link>
-			<name>res/Sheets/undertale_box.png</name>
-			<type>1</type>
-			<location>C:/Users/NATALIA E/Desktop/Magika/undertale_box.png</location>
+			<location>C:/Users/Giovanni/Desktop/Magika/OHjp_EESacg.wav</location>
 		</link>
 	</linkedResources>
 </projectDescription>

@@ -78,6 +78,7 @@ public class CaveWorldDoor extends StaticEntity {
 			handler.getWorld().getEntityManager().getPlayer().setY(1100);
 			handler.setWorld(world);
 			hello = true;
+			
 		}
 
 

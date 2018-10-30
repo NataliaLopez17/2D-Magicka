@@ -1,6 +1,7 @@
 package Game.Entities.Creatures;
 
 import Game.Entities.EntityBase;
+import Game.GameStates.GameState;
 import Game.GameStates.State;
 import Game.Inventories.Inventory;
 import Game.Items.Item;
@@ -87,6 +88,12 @@ public class Player extends CreatureBase {
 
 	@Override
 	public void tick() {
+		if (handler.getKeyManager().keyJustPressed(KeyEvent.VK_TAB) && GameState.World22 == true) {
+			handler.setWorld(CaveWorld.theCoreWorld);
+			handler.getWorld().getEntityManager().getPlayer().setX(600);
+			handler.getWorld().getEntityManager().getPlayer().setY(1100);
+
+		}
 		for (Item i : handler.getWorld().getEntityManager().getPlayer().getInventory().getInventoryItems()) {
 			if (i.getName() == "health potion") {
 				handler.getWorld().getEntityManager().getPlayer().setHealth(75);

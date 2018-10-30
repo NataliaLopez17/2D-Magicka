@@ -57,12 +57,13 @@ public class BaseWorld {
 
 		}
 		if(handler.getKeyManager().keyJustPressed(KeyEvent.VK_G) && oof == true) {
+			CaveWorldDoor.hello = false;
 			TheCoreWorld.stopFollowingMeSans++;
-			entityManager.addEntity(new SansCompanion(handler, handler.getWorld().getEntityManager().getPlayer().getX(), handler.getWorld().getEntityManager().getPlayer().getY() - 25));
+			entityManager.addEntity(new SansCompanion(handler, handler.getWorld().getEntityManager().getPlayer().getX(), handler.getWorld().getEntityManager().getPlayer().getY() - 35));
 			for (Item j : handler.getWorld().getEntityManager().getPlayer().getInventory().getInventoryItems()) {
 				if (j.getName() == "CompanionItem") {
 					j.setCount(j.getCount() - 1);
-
+					oof = false;
 				}
 			}
 		}

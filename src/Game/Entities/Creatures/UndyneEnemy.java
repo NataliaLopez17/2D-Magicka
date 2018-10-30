@@ -38,8 +38,8 @@ public class UndyneEnemy extends CreatureBase  {
 		bounds.y=42;
 		bounds.width=42;
 		bounds.height=42;
-		speed=1.5f;
-		health=2;
+		speed=2.7f;
+		health=70;
 
 		NewCam= new Rectangle();
 

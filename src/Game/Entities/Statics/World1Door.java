@@ -59,13 +59,6 @@ public class World1Door extends StaticEntity {
 			g.setColor(Color.black);
 			checkForPlayer(g, handler.getWorld().getEntityManager().getPlayer());
 		}
-//		else if (NewEnemy.companionItemCount >= 1) {
-//			g.drawImage(Images.door,(int)(300-handler.getGameCamera().getxOffset()),(int)(30-handler.getGameCamera().getyOffset()),width,height,null);
-//
-//			g.setColor(Color.black);
-//			checkForPlayer(g, handler.getWorld().getEntityManager().getPlayer());
-//		}
-
 	}
 
 	private void checkForPlayer(Graphics g, Player p) {
